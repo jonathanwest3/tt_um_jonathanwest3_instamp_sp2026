@@ -319,7 +319,7 @@ Xsky130_fd_pr__pfet_g5v0d10v5_DB8A6Y_0 G S m1_4014_7500# S m1_4014_7500# G S G s
 Xsky130_fd_pr__pfet_g5v0d10v5_PUA7NM_0 G m1_4014_7500# m1_4014_7500# G D S D G sky130_fd_pr__pfet_g5v0d10v5_PUA7NM
 .ends
 
-.subckt opamp Vref Vout Vp Vn VDD GND
+.subckt opamp Vref Vout Vp Vn VDD Vg1 GND
 Xm13_14 Vg11 Vg27 VDD Vd29 m11_12
 XM20 GND Vg22 GND Vg1 sky130_fd_pr__nfet_g5v0d10v5_VXNDUF
 XM24 VDD VDD Vd24 Vg5 sky130_fd_pr__pfet_g5v0d10v5_4KCRW8
@@ -525,10 +525,10 @@ XR3 GND Vout2 Vn4 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR4 GND Vout3 Vp4 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR5 GND Vp4 Vout5 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR6 GND Vn4 Vout sky130_fd_pr__res_high_po_0p35_T9W6LG
-Xopamp_0 Vref Vout Vp4 Vn4 VDD GND opamp
-Xopamp_1 Vref Vout2 Vn Rgn VDD GND opamp
-Xopamp_2 Vref Vout3 Vp Rgp VDD GND opamp
+Xopamp_0 Vref Vout Vp4 Vn4 VDD opamp_0/Vg1 GND opamp
+Xopamp_1 Vref Vout2 Vn Rgn VDD opamp_1/Vg1 GND opamp
+Xopamp_2 Vref Vout3 Vp Rgp VDD opamp_2/Vg1 GND opamp
 Xbandgap_0 Vref VDD GND bandgap
-Xopamp_3 Vref Vout5 Vmid Vout5 VDD GND opamp
+Xopamp_3 Vref Vout5 Vmid Vout5 VDD opamp_3/Vg1 GND opamp
 .ends
 

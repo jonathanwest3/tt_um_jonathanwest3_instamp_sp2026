@@ -1,4 +1,4 @@
-* NGSPICE file created from instamp.ext - technology: sky130A
+* SPICE3 file created from instamp.ext - technology: sky130A
 
 X0 Vout3 Rgp GND sky130_fd_pr__res_high_po_0p35 l=76.36
 X1 Vout2 Rgn GND sky130_fd_pr__res_high_po_0p35 l=76.36
@@ -840,3 +840,324 @@ X836 opamp_3/m5_m6_0/m1_4014_7500# opamp_3/Vg5 VDD VDD sky130_fd_pr__pfet_g5v0d1
 X837 opamp_3/m5_m6_0/m1_4014_7500# opamp_3/Vg5 opamp_3/Vg5 VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=3.828 ps=27.56 w=6.6 l=2
 X838 opamp_3/Vg5 opamp_3/Vg5 opamp_3/m5_m6_0/m1_4014_7500# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=6.6 l=2
 X839 opamp_3/Vg5 opamp_3/Vg5 opamp_3/m5_m6_0/m1_4014_7500# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=6.6 l=2
+C0 VDD opamp_0/Vg5 40.35803f
+C1 opamp_3/Vg11 Vout5 14.60566f
+C2 Vout opamp_0/Vd30 2.41002f
+C3 Vp opamp_2/Vs29 9.9276f
+C4 opamp_2/Vg11 opamp_2/Vd29 10.4469f
+C5 opamp_1/Vg1 opamp_1/Vg28 10.30674f
+C6 opamp_3/Vg5 opamp_3/m5_m6_0/m1_4014_7500# 5.58454f
+C7 opamp_3/Vg27 opamp_3/Vg11 5.62894f
+C8 opamp_0/Vd8 opamp_0/Vd10 6.33543f
+C9 opamp_1/Vg22 Vout2 14.99031f
+C10 Vout opamp_0/Vd29 10.50656f
+C11 Vout3 opamp_2/Vd29 10.50656f
+C12 bandgap_0/Vg2 bandgap_0/sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S 3.432f
+C13 opamp_3/Vg22 VDD 16.76686f
+C14 opamp_3/Vg1 Vout5 15.506f
+C15 opamp_1/Vg22 opamp_1/m21_22_0/G 7.55308f
+C16 VDD Vout 76.92433f
+C17 opamp_3/Vd9 opamp_3/Vd8 6.56878f
+C18 Vout opamp_0/Vg22 14.99031f
+C19 Vp opamp_2/Vd9 19.13077f
+C20 opamp_2/m31_32_0/m1_21854_12984# opamp_2/Vg1 3.06803f
+C21 opamp_2/Vd10 opamp_2/Vg1 10.63076f
+C22 VDD opamp_3/Vd29 9.85583f
+C23 opamp_3/Vg28 opamp_3/Vd24 5.03054f
+C24 opamp_1/Vg28 opamp_1/Vg27 7.81879f
+C25 opamp_0/m21_22_0/G Vout 3.45718f
+C26 Rgp opamp_2/Vd30 10.72187f
+C27 Vref Vout3 2.29456f
+C28 bandgap_0/Ve1 Vref 3.61638f
+C29 opamp_3/Vg22 Vout5 14.99031f
+C30 opamp_3/Vs29 Vout5 9.92975f
+C31 opamp_2/Vg11 opamp_2/Vg1 9.42796f
+C32 opamp_3/m5_m6_0/m1_4014_7500# VDD 2.18726f
+C33 opamp_3/Vs29 Vmid 9.9276f
+C34 opamp_1/Vd8 opamp_1/Vd10 6.3411f
+C35 opamp_2/Vg5 opamp_2/m07_08_0/m1_29362_10250# 8.72513f
+C36 opamp_2/Vg1 opamp_2/Vg28 10.30674f
+C37 opamp_0/Vs29 Vp4 9.9276f
+C38 opamp_3/Vg27 opamp_3/Vg22 12.71117f
+C39 VDD opamp_0/Vg28 5.76171f
+C40 opamp_3/Vd9 Vout5 6.88871f
+C41 bandgap_0/Ve1 bandgap_0/Vg2 3.82682f
+C42 opamp_3/Vd9 Vmid 20.12228f
+C43 Vout3 opamp_2/Vg1 15.50469f
+C44 opamp_0/Vg22 opamp_0/Vg28 13.1255f
+C45 VDD opamp_1/Vd8 4.0362f
+C46 VDD opamp_2/m07_08_0/m1_29362_10250# 3.2948f
+C47 opamp_1/Vg22 opamp_1/Vg27 12.71117f
+C48 opamp_3/Vd29 Vout5 11.01137f
+C49 opamp_3/Vd29 Vmid 11.01479f
+C50 opamp_0/Vd8 Vp4 26.6289f
+C51 opamp_0/Vd8 VDD 4.03378f
+C52 opamp_3/Vg5 opamp_3/Vd8 4.30638f
+C53 VDD Rgp 3.42185f
+C54 VDD opamp_2/Vg27 81.89848f
+C55 opamp_1/m5_m6_0/m1_4014_7500# opamp_1/Vg5 5.58454f
+C56 opamp_2/Vd24 opamp_2/Vg27 4.59631f
+C57 opamp_2/Vd9 opamp_2/Vd8 6.57226f
+C58 opamp_3/Vg5 VDD 41.58646f
+C59 opamp_3/Vg28 VDD 5.76171f
+C60 opamp_1/Vg22 opamp_1/Vg28 13.1255f
+C61 opamp_3/Vg11 opamp_3/Vd30 11.10904f
+C62 VDD opamp_1/Vg11 32.20789f
+C63 opamp_0/Vg1 opamp_0/Vd9 12.26229f
+C64 VDD opamp_0/m07_08_0/m1_29362_10250# 3.11738f
+C65 VDD opamp_1/m07_08_0/m1_29362_10250# 3.11738f
+C66 VDD opamp_0/Vd30 7.7221f
+C67 VDD opamp_2/Vd30 7.86483f
+C68 opamp_0/Vd9 Vout 6.73022f
+C69 VDD bandgap_0/Vg5 7.12317f
+C70 Vref bandgap_0/Vg12 6.37051f
+C71 opamp_0/Vd24 opamp_0/m25_26_0/m1_160_1028# 2.78577f
+C72 opamp_0/Vg27 opamp_0/Vg11 5.62894f
+C73 opamp_3/Vg1 opamp_3/m31_32_0/m1_21854_12984# 3.06803f
+C74 Vp4 opamp_0/Vd29 10.9124f
+C75 Rgn opamp_1/Vd8 31.63265f
+C76 opamp_3/Vg5 Vout5 11.94788f
+C77 opamp_3/Vg28 Vout5 0.2412p
+C78 opamp_0/Vg1 opamp_0/m31_32_0/m1_21854_12984# 3.06895f
+C79 VDD opamp_0/Vd29 9.84027f
+C80 opamp_3/Vg22 opamp_3/m21_22_0/G 7.55308f
+C81 opamp_2/Vg22 opamp_2/Vg27 12.71117f
+C82 VDD opamp_2/Vg5 43.85909f
+C83 Vout3 opamp_2/Vd9 6.73843f
+C84 Vout5 opamp_3/Vd24 8.73015f
+C85 VDD opamp_0/m5_m6_0/m1_4014_7500# 2.05436f
+C86 opamp_1/Vd24 opamp_1/m25_26_0/m1_160_1028# 2.78577f
+C87 opamp_1/Vd8 Vn 25.93387f
+C88 Rgp opamp_2/Vd8 26.19081f
+C89 opamp_3/Vg27 opamp_3/Vg28 7.81883f
+C90 opamp_2/m25_26_0/m1_160_1028# opamp_2/Vd24 2.78577f
+C91 VDD opamp_3/Vd8 4.0464f
+C92 opamp_2/Vd10 Rgp 18.32126f
+C93 VDD Vp 2.94596f
+C94 opamp_3/Vg27 opamp_3/Vd24 4.59631f
+C95 VDD Vp4 6.26542f
+C96 opamp_1/Vd8 opamp_1/Vd9 6.57598f
+C97 opamp_3/Vg1 opamp_3/Vd10 10.63076f
+C98 Vout2 opamp_1/Vg11 14.60185f
+C99 opamp_2/m5_m6_0/m1_4014_7500# opamp_2/Vg5 5.58454f
+C100 VDD opamp_0/Vg22 16.67966f
+C101 opamp_2/Vg11 opamp_2/Vg27 5.62894f
+C102 opamp_3/m07_08_0/m1_29362_10250# opamp_3/Vg5 8.72179f
+C103 opamp_0/m21_22_0/G VDD 11.90247f
+C104 opamp_0/Vd8 opamp_0/Vd9 6.57122f
+C105 opamp_2/Vg28 opamp_2/Vg27 7.81858f
+C106 VDD opamp_2/m5_m6_0/m1_4014_7500# 2.1812f
+C107 opamp_0/m21_22_0/G opamp_0/Vg22 7.55308f
+C108 opamp_3/m01_02/sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D opamp_3/Vg1 2.04512f
+C109 opamp_2/VgR2 VDD 7.32815f
+C110 Rgn opamp_1/Vs29 9.92975f
+C111 Vout5 opamp_3/Vd8 27.58975f
+C112 opamp_1/Vg1 opamp_1/Vg11 9.42796f
+C113 VDD opamp_0/VgR2 6.86667f
+C114 VDD opamp_2/m21_22_0/G 12.04534f
+C115 Vmid opamp_3/Vd8 27.44282f
+C116 opamp_3/Vg11 opamp_3/Vg1 9.42796f
+C117 Vout3 opamp_2/Vg27 0.25246p
+C118 Vout opamp_0/Vg27 0.25262p
+C119 Rgn opamp_1/Vd10 19.30688f
+C120 VDD Vout5 90.04514f
+C121 Vn opamp_1/Vs29 9.9276f
+C122 VDD Vmid 10.34359f
+C123 opamp_2/Vg5 opamp_2/Vd8 4.3033f
+C124 opamp_2/Vg11 opamp_2/Vd30 11.10904f
+C125 Vout2 opamp_1/Vd10 2.74436f
+C126 opamp_1/Vd30 opamp_1/Vg11 11.10904f
+C127 opamp_3/Vg27 VDD 80.99722f
+C128 VDD opamp_2/Vg22 16.73745f
+C129 Vp opamp_2/Vd8 26.11956f
+C130 VDD opamp_3/VgR2 6.86667f
+C131 opamp_1/Vd8 opamp_1/Vg5 4.28173f
+C132 Rgn VDD 11.69341f
+C133 opamp_1/Vg1 opamp_1/Vs29 2.19683f
+C134 VDD opamp_2/Vd8 4.32843f
+C135 opamp_2/m01_02/sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D opamp_2/Vg1 2.04512f
+C136 opamp_2/Vg1 opamp_2/Vs29 2.19683f
+C137 VDD Vout2 85.91603f
+C138 Vout3 opamp_2/Vd30 2.41002f
+C139 opamp_1/Vd29 opamp_1/Vg11 10.4469f
+C140 opamp_1/Vg1 opamp_1/Vd10 10.63076f
+C141 opamp_0/Vd24 opamp_0/Vg27 4.59631f
+C142 VDD Vn 2.17395f
+C143 opamp_3/m07_08_0/m1_29362_10250# VDD 3.25535f
+C144 opamp_2/m21_22_0/G opamp_2/Vg22 7.55308f
+C145 opamp_0/Vg27 opamp_0/Vg28 7.81883f
+C146 opamp_0/Vg1 opamp_0/Vg11 9.42796f
+C147 VDD opamp_2/Vg11 32.39076f
+C148 opamp_1/Vg11 opamp_1/Vg27 5.62894f
+C149 opamp_3/Vg27 Vout5 0.25301p
+C150 opamp_2/Vg5 Vout3 8.86845f
+C151 Vout opamp_0/Vg11 14.60118f
+C152 opamp_0/Vs29 Vn4 9.92975f
+C153 VDD opamp_1/m21_22_0/G 11.90247f
+C154 opamp_0/Vd10 Vn4 18.67064f
+C155 opamp_0/Vd9 Vp4 19.13207f
+C156 opamp_3/Vg11 opamp_3/Vd29 10.4469f
+C157 opamp_1/m07_08_0/m1_29362_10250# opamp_1/Vg5 8.72513f
+C158 VDD opamp_2/Vg28 6.0082f
+C159 opamp_2/Vd24 opamp_2/Vg28 5.03054f
+C160 opamp_0/Vg1 opamp_0/Vg5 2.03511f
+C161 bandgap_0/sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S bandgap_0/Vg1 3.86422f
+C162 VDD opamp_1/Vd30 7.7221f
+C163 VDD Vout3 83.43378f
+C164 opamp_3/Vs29 opamp_3/Vg1 2.19683f
+C165 Vout opamp_0/Vg5 8.88129f
+C166 opamp_0/Vd8 Vn4 28.37907f
+C167 opamp_2/Vd24 Vout3 8.73015f
+C168 opamp_2/Vd9 opamp_2/Vg1 12.26229f
+C169 opamp_3/m25_26_0/m1_160_1028# opamp_3/Vd24 2.78577f
+C170 opamp_1/Vd29 VDD 9.84027f
+C171 VDD opamp_3/m21_22_0/G 12.03283f
+C172 opamp_2/Vd10 opamp_2/Vd8 6.31189f
+C173 Rgn Vn 3.46525f
+C174 opamp_1/Vd24 Vout2 8.73015f
+C175 opamp_3/Vg1 opamp_3/Vd9 12.26229f
+C176 opamp_2/m21_22_0/G Vout3 3.45718f
+C177 opamp_0/Vd30 Vn4 10.41878f
+C178 VDD opamp_1/Vg5 40.51174f
+C179 Vout2 opamp_1/Vd9 6.73022f
+C180 VDD opamp_1/Vg27 53.23235f
+C181 opamp_2/Vg22 opamp_2/Vg28 13.1255f
+C182 Vn opamp_1/Vd9 19.12968f
+C183 opamp_1/Vg1 Vout2 15.50469f
+C184 opamp_0/Vg1 Vout 15.50469f
+C185 opamp_1/m21_22_0/G Vout2 3.45718f
+C186 opamp_2/Vg22 Vout3 14.99031f
+C187 opamp_3/Vd30 VDD 7.79605f
+C188 opamp_1/VgR2 VDD 6.86501f
+C189 Vp opamp_2/Vd29 10.92988f
+C190 opamp_3/m21_22_0/G Vout5 3.45718f
+C191 Rgn opamp_1/Vd30 10.40867f
+C192 opamp_3/Vd8 opamp_3/Vd10 6.34397f
+C193 VDD opamp_2/Vd29 9.85321f
+C194 opamp_1/Vg1 opamp_1/Vd9 12.26229f
+C195 VDD opamp_1/Vg28 5.76309f
+C196 opamp_1/Vd30 Vout2 2.41002f
+C197 opamp_0/Vd8 opamp_0/Vg5 4.30638f
+C198 VDD opamp_0/Vg27 53.15857f
+C199 opamp_2/Vd10 Vout3 2.74436f
+C200 opamp_0/Vg27 opamp_0/Vg22 12.71117f
+C201 Vp4 Vn4 4.36806f
+C202 opamp_1/m31_32_0/m1_21854_12984# opamp_1/Vg1 3.06803f
+C203 VDD bandgap_0/Vg12 7.89174f
+C204 Rgp opamp_2/Vs29 10.7192f
+C205 opamp_0/Vd30 opamp_0/Vg11 11.10904f
+C206 VDD Vn4 6.17669f
+C207 opamp_1/Vd29 Vout2 10.50656f
+C208 Vout opamp_0/Vd24 8.73015f
+C209 opamp_3/Vg1 opamp_3/Vg5 2.03511f
+C210 opamp_3/Vg28 opamp_3/Vg1 10.30674f
+C211 opamp_2/Vg11 Vout3 14.60118f
+C212 opamp_1/Vd29 Vn 10.93354f
+C213 opamp_0/Vg1 opamp_0/Vs29 2.19683f
+C214 opamp_0/Vg1 opamp_0/Vd10 10.63076f
+C215 opamp_3/Vd30 Vout5 12.95551f
+C216 opamp_0/Vg1 opamp_0/Vg28 10.30674f
+C217 opamp_1/Vg1 opamp_1/m01_02/sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D 2.04512f
+C218 opamp_0/Vg5 opamp_0/m07_08_0/m1_29362_10250# 8.72513f
+C219 opamp_0/Vd10 Vout 2.74436f
+C220 Vout3 opamp_2/Vg28 0.24129p
+C221 opamp_0/Vg11 opamp_0/Vd29 10.4469f
+C222 VDD opamp_1/Vg22 16.67966f
+C223 Vout2 opamp_1/Vg5 8.90882f
+C224 Vout opamp_0/Vg28 0.24108p
+C225 Vout2 opamp_1/Vg27 0.25281p
+C226 opamp_1/Vd24 opamp_1/Vg27 4.59631f
+C227 opamp_3/Vg11 VDD 32.40379f
+C228 Vout5 opamp_3/Vd10 22.08344f
+C229 VDD Vref 28.04626f
+C230 VDD opamp_1/m5_m6_0/m1_4014_7500# 2.05436f
+C231 opamp_2/Vg5 opamp_2/Vg1 2.03511f
+C232 opamp_3/Vg22 opamp_3/Vg28 13.1255f
+C233 opamp_0/Vg1 opamp_0/m01_02/sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D 2.04512f
+C234 VDD opamp_0/Vg11 32.20789f
+C235 opamp_1/Vg1 opamp_1/Vg5 2.03511f
+C236 opamp_0/Vg5 opamp_0/m5_m6_0/m1_4014_7500# 5.58454f
+C237 Vout2 opamp_1/Vg28 0.24107p
+C238 opamp_1/Vd24 opamp_1/Vg28 5.03054f
+C239 opamp_0/Vd24 opamp_0/Vg28 5.03054f
+C240 opamp_3/Vs29 GND 5.43116f **FLOATING
+C241 Vmid GND 7.03491f
+C242 opamp_3/Vg28 GND 42.08957f
+C243 Vout5 GND 0.14595p
+C244 opamp_3/Vd30 GND 3.04396f **FLOATING
+C245 opamp_3/Vg11 GND 3.49389f **FLOATING
+C246 opamp_3/m25_26_0/m1_160_1028# GND 5.13447f **FLOATING
+C247 opamp_3/Vd24 GND 10.24053f
+C248 opamp_3/Vd9 GND 15.6496f **FLOATING
+C249 opamp_3/VgR2 GND 5.38253f
+C250 opamp_3/Vg27 GND 13.59067f
+C251 opamp_3/Vg1 GND 48.14874f
+C252 opamp_3/Vg5 GND 5.57141f
+C253 opamp_3/Vd8 GND 0.10902p **FLOATING
+C254 opamp_3/Vd10 GND 10.1702f **FLOATING
+C255 opamp_3/Vg22 GND 6.73139f
+C256 opamp_3/Vd29 GND 3.89839f **FLOATING
+C257 bandgap_0/Vg1 GND 2.05474f
+C258 bandgap_0/sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S GND 13.16624f
+C259 bandgap_0/bandgap_m3_3/D GND 2.48855f
+C260 Vref GND 71.63693f
+C261 bandgap_0/Vg2 GND 2.85657f
+C262 bandgap_0/Vg10 GND 5.5189f
+C263 bandgap_0/Vg3 GND 8.35142f
+C264 bandgap_0/Ve1 GND 61.71934f
+C265 bandgap_0/Vg12 GND 19.95356f
+C266 opamp_2/Vs29 GND 5.43116f **FLOATING
+C267 Rgp GND 15.12753f
+C268 Vp GND 6.83845f
+C269 opamp_2/Vg28 GND 41.91743f
+C270 Vout3 GND 0.14383p
+C271 opamp_2/Vd30 GND 3.04396f **FLOATING
+C272 opamp_2/Vg11 GND 3.49389f **FLOATING
+C273 opamp_2/m25_26_0/m1_160_1028# GND 5.13447f **FLOATING
+C274 opamp_2/Vd24 GND 10.24053f
+C275 opamp_2/Vd9 GND 15.65072f **FLOATING
+C276 opamp_2/VgR2 GND 5.30489f
+C277 opamp_2/Vg27 GND 13.59067f
+C278 opamp_2/Vg1 GND 48.33762f
+C279 opamp_2/Vg5 GND 5.51314f
+C280 opamp_2/Vd8 GND 0.10902p **FLOATING
+C281 opamp_2/Vd10 GND 10.16708f **FLOATING
+C282 opamp_2/Vg22 GND 6.73139f
+C283 opamp_2/Vd29 GND 3.89724f **FLOATING
+C284 VDD GND 1.4168p
+C285 opamp_1/Vs29 GND 5.43116f **FLOATING
+C286 Rgn GND 9.33155f
+C287 Vn GND 7.79703f
+C288 opamp_1/Vg28 GND 42.46302f
+C289 Vout2 GND 0.13933p
+C290 opamp_1/Vd30 GND 3.04396f **FLOATING
+C291 opamp_1/Vg11 GND 3.49389f **FLOATING
+C292 opamp_1/m25_26_0/m1_160_1028# GND 5.13447f **FLOATING
+C293 opamp_1/Vd24 GND 10.24053f
+C294 opamp_1/Vd9 GND 16.01484f **FLOATING
+C295 opamp_1/VgR2 GND 5.70928f
+C296 opamp_1/Vg27 GND 14.03632f
+C297 opamp_1/Vg1 GND 48.85492f
+C298 opamp_1/Vg5 GND 6.02264f
+C299 opamp_1/Vd8 GND 0.10952p **FLOATING
+C300 opamp_1/Vd10 GND 10.16947f **FLOATING
+C301 opamp_1/Vg22 GND 6.73139f
+C302 opamp_1/Vd29 GND 3.89899f **FLOATING
+C303 opamp_0/Vs29 GND 5.43116f **FLOATING
+C304 Vn4 GND 11.49944f
+C305 Vp4 GND 13.40468f
+C306 opamp_0/Vg28 GND 41.51816f
+C307 Vout GND 0.13525p
+C308 opamp_0/Vd30 GND 3.04396f **FLOATING
+C309 opamp_0/Vg11 GND 3.49389f **FLOATING
+C310 opamp_0/m25_26_0/m1_160_1028# GND 5.13447f **FLOATING
+C311 opamp_0/Vd24 GND 10.24053f
+C312 opamp_0/Vd9 GND 15.70595f **FLOATING
+C313 opamp_0/VgR2 GND 5.48661f
+C314 opamp_0/Vg27 GND 13.59067f
+C315 opamp_0/Vg1 GND 48.3787f
+C316 opamp_0/Vg5 GND 6.32989f
+C317 opamp_0/Vd8 GND 0.10913p **FLOATING
+C318 opamp_0/Vd10 GND 10.16682f **FLOATING
+C319 opamp_0/Vg22 GND 6.73139f
+C320 opamp_0/Vd29 GND 3.89899f **FLOATING

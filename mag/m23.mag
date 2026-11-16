@@ -1,8 +1,8 @@
 magic
 tech sky130A
-timestamp 1794259980
+timestamp 1794585609
 use sky130_fd_pr__nfet_g5v0d10v5_R9FRNM  sky130_fd_pr__nfet_g5v0d10v5_R9FRNM_0
-timestamp 1794259980
+timestamp 1794585609
 transform 0 1 19113 -1 0 8695
 box -298 -629 298 629
 << end >>

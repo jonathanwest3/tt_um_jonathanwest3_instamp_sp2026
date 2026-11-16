@@ -41,6 +41,11 @@ N 350 -600 380 -600 {lab=Vmid}
 N 300 -580 380 -580 {lab=VDD}
 N 360 -560 380 -560 {lab=0}
 N 360 -560 360 -550 {lab=0}
+N 850 -630 850 -610 {lab=0}
+N 780 -630 780 -610 {lab=0}
+N 750 -700 850 -700 {lab=Vout}
+N 850 -700 850 -690 {lab=Vout}
+N 780 -700 780 -690 {lab=Vout}
 C {vsource.sym} 50 -510 0 0 {name=Vdd value=3.3 savecurrent=false}
 C {code.sym} -220 -400 0 0 {
 name=TT_MODELS
@@ -61,17 +66,27 @@ C {vdd.sym} -60 -540 0 0 {name=l6 lab=Vmid}
 C {lab_wire.sym} 270 -700 0 0 {name=p3 sig_type=std_logic lab=Vp}
 C {lab_wire.sym} 250 -590 0 0 {name=p4 sig_type=std_logic lab=Vn}
 C {vsource.sym} 120 -550 0 0 {name=Vcm value="0 ac=0" savecurrent=false}
-C {code.sym} -220 -580 0 0 {name=NGSPICE
+C {code.sym} -240 -580 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .option wnflag=1 
 .option savecurrents
 .option rshunt=1e12
-.include ../netlist/rcx/instamp.spice
+
+# if one of these is uncommented, it will
+# override the subcircuit in the symbol
+# from the cace extracction
+#.include ../netlist/rcx/instamp.spice
+# from the mag extraction
+#.include ../netlist/layout/instamp.spice
+
 .save all
 .control
+if 0
 op
 write instamp_tb.raw
+endif
+
 set appendwrite
 set gnuplot_terminal=png/quit
 
@@ -91,6 +106,37 @@ if 0
 + xlabel 'Time' ylabel 'Volts'
 endif
 
+# rise and fall times
+if 0
+let per=5u
+let tstop=$&per*3
+let tstep=per/1000
+alter Rg=90k
+alter @Vdiff[pulse] [ 0 100m $&per 1n 1n $&per $&tstop ] 
+tran $&tstep $&tstop
+plot V(Vp,vmid) V(vout,vmid)
+meas tran v_min MIN V(Vout)
+meas tran v_pp PP V(Vout)
+let v_high=(0.9*v_pp)+v_min
+let v_low=(0.1*v_pp)+v_min
+meas tran rise_time TRIG v(Vout) VAL='v_low' rise=1 targ v(vout) Val='v_high' RISE=1
+let sr=(v_high-v_low)/rise_time
+print sr
+
+  gnuplot v_rise_fall V(vp,vmid) V(Vout,vmid)
++ title 'Rise and Fall Times'
++ xlabel 'Time (s)' ylabel 'Volts'
+
+endif
+
+if 0
+ac dec 100 1 1Meg
+let gain = db(V(Vout))
+let cutoff_db = vecmax(gain)-3.0
+meas ac bw WHEN gain=cutoff_db FALL =1
+meas ac max_gain MAX gain
+print bw max_gain
+endif
 * run ac on schematic as drawn
 if 1
   destroy all
@@ -192,7 +238,7 @@ C {gnd.sym} 50 -480 0 0 {name=Vmid2 lab=0
 value=1.65}
 C {instamp.sym} 530 -660 0 0 {name=x2}
 C {gnd.sym} 730 -490 0 0 {name=l1 lab=0}
-C {capa.sym} 730 -550 0 0 {name=C2
+C {capa.sym} 730 -550 0 0 {name=Cref
 m=1
 value=100n
 footprint=1206
@@ -202,10 +248,22 @@ C {lab_wire.sym} 750 -700 0 0 {name=p6 sig_type=std_logic lab=Vout
 }
 C {vdd.sym} 350 -600 3 0 {name=l5 lab=Vmid}
 C {res.sym} 350 -660 2 0 {name=Rg
-value=10k
+value=17k
 footprint=1206
 device=resistor
 m=1}
 C {vdd.sym} 300 -580 3 0 {name=l8 lab=VDD}
 C {gnd.sym} 360 -550 0 0 {name=Vmid3 lab=0
 value=1.65}
+C {res.sym} 780 -660 0 0 {name=Rload
+value=1Meg
+footprint=1206
+device=resistor
+m=1}
+C {capa-2.sym} 850 -660 0 0 {name=Cload
+m=1
+value=10p
+footprint=1206
+device=polarized_capacitor}
+C {gnd.sym} 780 -610 0 0 {name=l2 lab=0}
+C {gnd.sym} 850 -610 0 0 {name=l7 lab=0}

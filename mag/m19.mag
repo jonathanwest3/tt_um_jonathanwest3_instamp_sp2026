@@ -1,9 +1,9 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1794259980
+timestamp 1794585609
 use sky130_fd_pr__pfet_g5v0d10v5_J3544R  sky130_fd_pr__pfet_g5v0d10v5_J3544R_0
-timestamp 1794259980
+timestamp 1794585609
 transform 0 1 38395 -1 0 18338
 box -1414 -1297 1414 1297
 << end >>

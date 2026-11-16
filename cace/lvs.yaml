@@ -134,3 +134,14 @@ parameters:
       netgen_lvs:
         script: run_project_lvs.tcl
 
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc
+
+

@@ -68,15 +68,10 @@ N 1360 -510 1360 -470 {lab=Vout}
 N 1160 -700 1180 -700 {lab=Vout5}
 N 1160 -700 1160 -660 {lab=Vout5}
 N 830 -330 860 -330 {lab=Vout2}
-C {bandgap_x.sym} 310 -460 0 0 {name=x1}
-C {opamp_x.sym} 680 -290 0 0 {name=x2}
 C {ipin.sym} 370 -660 0 0 {name=p1 lab=Vp}
 C {ipin.sym} 360 -290 0 0 {name=p2 lab=Vn}
 C {opin.sym} 1410 -470 0 0 {name=p3 lab=Vout}
 C {opin.sym} 480 -470 0 0 {name=p4 lab=Vref}
-C {opamp_x.sym} 690 -660 0 0 {name=x3}
-C {opamp_x.sym} 1190 -470 0 0 {name=x4}
-C {opamp_x.sym} 1330 -660 0 1 {name=x5}
 C {lab_pin.sym} 530 -250 0 0 {name=p5 sig_type=std_logic lab=Vref}
 C {lab_pin.sym} 540 -620 0 0 {name=p6 sig_type=std_logic lab=Vref}
 C {lab_pin.sym} 1040 -430 0 0 {name=p7 sig_type=std_logic lab=Vref}
@@ -130,11 +125,16 @@ C {lab_pin.sym} 1040 -510 0 0 {name=p23 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1040 -490 0 0 {name=p24 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1480 -700 0 1 {name=p25 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1480 -680 0 1 {name=p26 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 920 -310 1 0 {name=p27 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1090 -310 1 0 {name=p28 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 650 -570 1 0 {name=p29 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 640 -430 1 0 {name=p30 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1090 -680 1 0 {name=p32 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 160 -470 0 0 {name=p33 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 160 -450 0 0 {name=p34 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 920 -680 1 0 {name=p31 sig_type=std_logic lab=GND}
+C {opamp.sym} 690 -660 0 0 {name=x6}
+C {opamp.sym} 680 -290 0 0 {name=x2}
+C {opamp.sym} 1190 -470 0 0 {name=x3}
+C {opamp.sym} 1330 -660 0 1 {name=x4}
+C {bandgap.sym} 310 -460 0 0 {name=x1}
+C {gnd.sym} 650 -570 2 0 {name=l3 lab=GND}
+C {gnd.sym} 640 -430 2 0 {name=l4 lab=GND}
+C {gnd.sym} 920 -680 2 0 {name=l5 lab=GND}
+C {gnd.sym} 1090 -680 2 0 {name=l6 lab=GND}
+C {gnd.sym} 920 -310 2 0 {name=l7 lab=GND}
+C {gnd.sym} 1090 -310 2 0 {name=l8 lab=GND}
