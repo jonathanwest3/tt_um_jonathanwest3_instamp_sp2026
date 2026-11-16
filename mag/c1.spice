@@ -1,0 +1,16 @@
+* NGSPICE file created from c1.ext - technology: sky130A
+
+.subckt sky130_fd_pr__cap_mim_m3_1_ZUZAFU C2_0_0 C1_0_0 C2_0_1 C1_0_1 C2_1_0 C1_1_0
++ C2_1_1 C1_1_1
+X0 C1_1_0 C2_1_0 sky130_fd_pr__cap_mim_m3_1 l=20 w=30
+X1 C1_0_1 C2_0_1 sky130_fd_pr__cap_mim_m3_1 l=20 w=30
+X2 C1_0_0 C2_0_0 sky130_fd_pr__cap_mim_m3_1 l=20 w=30
+X3 C1_1_1 C2_1_1 sky130_fd_pr__cap_mim_m3_1 l=20 w=30
+.ends
+
+
+* Top level circuit c1
+
+Xsky130_fd_pr__cap_mim_m3_1_ZUZAFU_0 M3 M4 M3 M4 M3 M4 M3 M4 sky130_fd_pr__cap_mim_m3_1_ZUZAFU
+.end
+

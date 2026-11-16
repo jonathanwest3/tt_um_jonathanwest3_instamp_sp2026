@@ -1,0 +1,20 @@
+magic
+tech sky130A
+timestamp 1794259980
+<< locali >>
+rect 68 49 552 121
+<< metal1 >>
+rect 4 1035 102 1084
+rect 80 514 527 654
+use sky130_fd_pr__nfet_g5v0d10v5_CMNTPV  sky130_fd_pr__nfet_g5v0d10v5_CMNTPV_0
+timestamp 1794259980
+transform 0 1 302 -1 0 318
+box -298 -379 298 379
+use sky130_fd_pr__nfet_g5v0d10v5_CMNTPV  sky130_fd_pr__nfet_g5v0d10v5_CMNTPV_1
+timestamp 1794259980
+transform 0 1 302 -1 0 849
+box -298 -379 298 379
+<< labels >>
+flabel locali 260 88 260 88 0 FreeSans 400 0 0 0 S
+flabel metal1 46 1062 46 1062 0 FreeSans 400 0 0 0 D
+<< end >>

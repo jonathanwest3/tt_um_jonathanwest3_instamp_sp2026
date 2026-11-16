@@ -1,0 +1,60 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1792250899
+<< metal3 >>
+rect -4765 160 -333 4240
+rect 333 160 4765 4240
+rect -4765 -4240 -333 -160
+rect 333 -4240 4765 -160
+<< mimcap >>
+rect -4725 4160 -725 4200
+rect -4725 240 -4685 4160
+rect -765 240 -725 4160
+rect -4725 200 -725 240
+rect 373 4160 4373 4200
+rect 373 240 413 4160
+rect 4333 240 4373 4160
+rect 373 200 4373 240
+rect -4725 -240 -725 -200
+rect -4725 -4160 -4685 -240
+rect -765 -4160 -725 -240
+rect -4725 -4200 -725 -4160
+rect 373 -240 4373 -200
+rect 373 -4160 413 -240
+rect 4333 -4160 4373 -240
+rect 373 -4200 4373 -4160
+<< mimcapcontact >>
+rect -4685 240 -765 4160
+rect 413 240 4333 4160
+rect -4685 -4160 -765 -240
+rect 413 -4160 4333 -240
+<< metal4 >>
+rect -2777 4161 -2673 4400
+rect 2321 4161 2425 4400
+rect -4686 4160 -764 4161
+rect -4686 240 -4685 4160
+rect -765 240 -764 4160
+rect -4686 239 -764 240
+rect 412 4160 4334 4161
+rect 412 240 413 4160
+rect 4333 240 4334 4160
+rect 412 239 4334 240
+rect -2777 -239 -2673 239
+rect 2321 -239 2425 239
+rect -4686 -240 -764 -239
+rect -4686 -4160 -4685 -240
+rect -765 -4160 -764 -240
+rect -4686 -4161 -764 -4160
+rect 412 -240 4334 -239
+rect 412 -4160 413 -240
+rect 4333 -4160 4334 -240
+rect 412 -4161 4334 -4160
+rect -2777 -4400 -2673 -4161
+rect 2321 -4400 2425 -4161
+<< properties >>
+string FIXED_BBOX 333 160 4413 4240
+string gencell sky130_fd_pr__cap_mim_m3_1
+string library sky130
+string parameters w 20 l 20 val 815.2 carea 2.00 cperi 0.19 class capacitor nx 2 ny 2 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 ccov 100 stack 1 doports 1
+<< end >>

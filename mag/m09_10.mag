@@ -1,0 +1,26 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794259980
+<< locali >>
+rect 20624 17466 20710 17500
+<< metal1 >>
+rect 15502 14132 15556 14192
+rect 20160 14148 20220 14332
+rect 20386 14156 20436 14320
+rect 25028 14130 25090 14186
+use sky130_fd_pr__pfet_g5v0d10v5_FMWM9G  sky130_fd_pr__pfet_g5v0d10v5_FMWM9G_0
+timestamp 1794259980
+transform 0 1 17874 -1 0 15807
+box -1840 -2519 1840 2519
+use sky130_fd_pr__pfet_g5v0d10v5_FMWM9G  sky130_fd_pr__pfet_g5v0d10v5_FMWM9G_1
+timestamp 1794259980
+transform 0 -1 22722 -1 0 15807
+box -1840 -2519 1840 2519
+<< labels >>
+flabel metal1 20190 14216 20190 14216 0 FreeSans 1600 0 0 0 G9
+flabel metal1 20404 14260 20404 14260 0 FreeSans 1600 0 0 0 G10
+flabel metal1 15516 14154 15516 14154 0 FreeSans 1600 0 0 0 D9
+flabel metal1 25058 14162 25058 14162 0 FreeSans 1600 0 0 0 D10
+flabel locali 20660 17484 20660 17486 0 FreeSans 1600 0 0 0 S
+<< end >>

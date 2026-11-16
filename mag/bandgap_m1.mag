@@ -1,0 +1,23 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794416277
+<< locali >>
+rect 132 942 1390 980
+rect 140 10 1398 48
+<< metal1 >>
+rect 362 1016 1422 1034
+rect 362 1012 1426 1016
+rect 358 978 1426 1012
+rect 358 860 386 978
+rect 878 872 906 978
+rect 1398 864 1426 978
+rect 104 26 132 130
+rect 618 26 646 134
+rect 1134 26 1162 144
+rect 102 -30 1162 26
+use sky130_fd_pr__pfet_g5v0d10v5_P62BBU  sky130_fd_pr__pfet_g5v0d10v5_P62BBU_0
+timestamp 1794416277
+transform -1 0 764 0 -1 491
+box -874 -697 874 697
+<< end >>

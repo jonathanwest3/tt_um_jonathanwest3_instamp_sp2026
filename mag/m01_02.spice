@@ -1,0 +1,6 @@
+* NGSPICE file created from m01_02.ext - technology: sky130A
+
+X0 D G sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D S sky130_fd_pr__nfet_g5v0d10v5 ad=0.48285 pd=3.62 as=0.48285 ps=3.62 w=3.33 l=2
+X1 sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D G D S sky130_fd_pr__nfet_g5v0d10v5 ad=0.9657 pd=7.24 as=0.48285 ps=3.62 w=3.33 l=2
+X2 sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D G D S sky130_fd_pr__nfet_g5v0d10v5 ad=0.48285 pd=3.62 as=0.9657 ps=7.24 w=3.33 l=2
+X3 S G sky130_fd_pr__nfet_g5v0d10v5_Y3KDPX_0/D S sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=5

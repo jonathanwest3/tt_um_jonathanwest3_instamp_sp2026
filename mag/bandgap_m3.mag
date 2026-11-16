@@ -1,0 +1,44 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794416277
+<< locali >>
+rect -4198 900 -4154 954
+rect -3272 900 -3228 956
+rect -4198 896 -3228 900
+rect -4198 780 -4193 896
+rect -4156 790 -3228 896
+rect -4156 780 -4154 790
+rect -4198 -294 -4154 780
+rect -3272 -292 -3228 790
+<< viali >>
+rect -4193 780 -4156 896
+<< metal1 >>
+rect -4114 956 -3179 990
+rect -4282 896 -4120 916
+rect -4282 780 -4193 896
+rect -4156 780 -4120 896
+rect -4282 766 -4120 780
+rect -4278 700 -3314 734
+rect -4278 216 -4214 700
+rect -3220 476 -3179 956
+rect -4112 442 -3179 476
+rect -4278 182 -3314 216
+rect -4278 -298 -4214 182
+rect -3220 -42 -3179 442
+rect -4102 -76 -3179 -42
+rect -4278 -332 -3318 -298
+use sky130_fd_pr__nfet_g5v0d10v5_SNXN39  sky130_fd_pr__nfet_g5v0d10v5_SNXN39_0
+timestamp 1794416277
+transform 0 1 -3716 -1 0 327
+box -846 -658 846 658
+<< labels >>
+flabel metal1 -4252 846 -4252 846 0 FreeSans 800 0 0 0 G
+port 1 nsew
+flabel space -3754 1088 -3754 1088 0 FreeSans 800 0 0 0 B
+port 4 nsew
+flabel metal1 -3198 776 -3198 776 0 FreeSans 800 0 0 0 S
+port 5 nsew
+flabel metal1 -4246 118 -4246 118 0 FreeSans 800 0 0 0 D
+port 6 nsew
+<< end >>

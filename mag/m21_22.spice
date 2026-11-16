@@ -1,0 +1,20 @@
+* SPICE3 file created from m21_22.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_g5v0d10v5_DY6QAT a_n424_n1500# a_n266_n1500# w_n624_n1797#
++ VSUBS
+X0 a_n266_n1500# a_n424_n1500# a_n424_n1500# w_n624_n1797# sky130_fd_pr__pfet_g5v0d10v5 ad=4.35 pd=30.58 as=2.175 ps=15.29 w=15 l=0.5
+X1 a_n266_n1500# a_n424_n1500# a_n424_n1500# w_n624_n1797# sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X2 a_n424_n1500# a_n424_n1500# a_n266_n1500# w_n624_n1797# sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X3 a_n266_n1500# a_n424_n1500# a_n424_n1500# w_n624_n1797# sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=4.35 ps=30.58 w=15 l=0.5
+X4 a_n424_n1500# a_n424_n1500# a_n266_n1500# w_n624_n1797# sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+C0 a_n424_n1500# w_n624_n1797# 2.21149f
+C1 a_n424_n1500# a_n266_n1500# 7.53374f
+C2 w_n624_n1797# VSUBS 14.8196f
+.ends
+
+.subckt m21_22
+Xsky130_fd_pr__pfet_g5v0d10v5_DY6QAT_0 G S S VSUBS sky130_fd_pr__pfet_g5v0d10v5_DY6QAT
+Xsky130_fd_pr__pfet_g5v0d10v5_DY6QAT_1 D G S VSUBS sky130_fd_pr__pfet_g5v0d10v5_DY6QAT
+C0 S VSUBS -2.38501f
+.ends
+

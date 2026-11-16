@@ -1,0 +1,13 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794325410
+<< error_p >>
+rect 22097 6765 22201 8077
+use sky130_fd_pr__res_high_po_0p35_YSAZB6  sky130_fd_pr__res_high_po_0p35_YSAZB6_0
+timestamp 1794325410
+transform 1 0 22022 0 1 7421
+box -201 -782 201 782
+<< properties >>
+string MASKHINTS_RPM 43800 13480 44280 16220
+<< end >>

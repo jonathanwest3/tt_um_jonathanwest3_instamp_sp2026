@@ -1,0 +1,44 @@
+* SPICE3 file created from m27.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_g5v0d10v5_UMEKA9 B D0 S1 D2 S3 D4 S5 D6 S7 D8 S9 G9 D10
++ S11 D12 S13 D14 S15 D16 S17 D18 S19 D20 S21 D22 S23 D24 S24 VSUBS
+X0 S15 G9 D14 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X1 S13 G9 D12 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X2 S5 G9 D4 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X3 D4 G9 S3 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X4 S19 G9 D18 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X5 D12 G9 S11 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X6 S23 G9 D22 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X7 S11 G9 D10 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X8 S1 G9 D0 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=4.35 ps=30.58 w=15 l=0.5
+X9 D8 G9 S7 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X10 S7 G9 D6 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X11 D20 G9 S19 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X12 D16 G9 S15 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X13 S17 G9 D16 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X14 D24 G9 S23 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X15 D10 G9 S9 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X16 S9 G9 D8 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X17 D6 G9 S5 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X18 S21 G9 D20 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X19 D22 G9 S21 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X20 S3 G9 D2 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X21 D2 G9 S1 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X22 D18 G9 S17 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+X23 S24 G9 D24 B sky130_fd_pr__pfet_g5v0d10v5 ad=4.35 pd=30.58 as=2.175 ps=15.29 w=15 l=0.5
+X24 D14 G9 S13 B sky130_fd_pr__pfet_g5v0d10v5 ad=2.175 pd=15.29 as=2.175 ps=15.29 w=15 l=0.5
+C0 G9 B 5.23169f
+C1 B VSUBS 49.8722f
+.ends
+
+.subckt m27
+Xsky130_fd_pr__pfet_g5v0d10v5_UMEKA9_0 sky130_fd_pr__pfet_g5v0d10v5_UMEKA9_0/B S D
++ S D S D S D S D G S D S D S D S D S D S D S D S D VSUBS sky130_fd_pr__pfet_g5v0d10v5_UMEKA9
+C0 G S 13.92721f
+C1 D S -7.47829f
+C2 sky130_fd_pr__pfet_g5v0d10v5_UMEKA9_0/B D -2.01298f
+C3 G D 13.97928f
+C4 sky130_fd_pr__pfet_g5v0d10v5_UMEKA9_0/B VSUBS -9.37134f
+C5 S VSUBS 2.05937f
+.ends
+

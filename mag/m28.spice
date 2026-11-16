@@ -1,0 +1,28 @@
+* SPICE3 file created from m28.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_g5v0d10v5_H9RT8X B D0 S1 D2 S3 D4 S5 D6 S7 D8 S9 G9 D10
++ S11 D12 S13 D14 S14
+X0 D12 G9 S11 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X1 D6 G9 S5 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X2 S13 G9 D12 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X3 D10 G9 S9 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X4 D2 G9 S1 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X5 D8 G9 S7 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X6 S5 G9 D4 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X7 D14 G9 S13 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X8 S11 G9 D10 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X9 S1 G9 D0 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=2.9 ps=20.58 w=10 l=0.5
+X10 S14 G9 D14 B sky130_fd_pr__nfet_g5v0d10v5 ad=2.9 pd=20.58 as=1.45 ps=10.29 w=10 l=0.5
+X11 S7 G9 D6 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X12 S9 G9 D8 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X13 S3 G9 D2 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+X14 D4 G9 S3 B sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.5
+.ends
+
+.subckt m28
+Xsky130_fd_pr__nfet_g5v0d10v5_H9RT8X_0 VSUBS D S D S D S D S D S G D S D S D S sky130_fd_pr__nfet_g5v0d10v5_H9RT8X
+C0 D G 5.82198f
+C1 G S 5.86166f
+C2 D S -2.9597f
+.ends
+

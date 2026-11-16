@@ -1,0 +1,9 @@
+magic
+tech sky130A
+timestamp 1794416277
+<< comment >>
+rect 0 22400 16000 22500
+rect 0 100 100 22400
+rect 15900 100 16000 22400
+rect 0 0 16000 100
+<< end >>

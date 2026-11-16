@@ -1,0 +1,24 @@
+* SPICE3 file created from m09_10.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_g5v0d10v5_FMWM9G B S8 G8 VSUBS
+X0 S8 G8 B B sky130_fd_pr__pfet_g5v0d10v5 ad=6.4438 pd=45.02 as=3.2219 ps=22.51 w=22.22 l=1.5
+X1 S8 G8 B B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X2 S8 G8 B B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X3 S8 G8 B B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X4 S8 G8 B B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=6.4438 ps=45.02 w=22.22 l=1.5
+X5 B G8 S8 B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X6 B G8 S8 B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X7 B G8 S8 B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+X8 B G8 S8 B sky130_fd_pr__pfet_g5v0d10v5 ad=3.2219 pd=22.51 as=3.2219 ps=22.51 w=22.22 l=1.5
+C0 G8 S8 18.0455f
+C1 B S8 5.34999f
+C2 G8 B 22.8869f
+C3 B VSUBS 54.26858f
+.ends
+
+.subckt m09_10
+Xsky130_fd_pr__pfet_g5v0d10v5_FMWM9G_0 S D9 G9 VSUBS sky130_fd_pr__pfet_g5v0d10v5_FMWM9G
+Xsky130_fd_pr__pfet_g5v0d10v5_FMWM9G_1 S D10 G10 VSUBS sky130_fd_pr__pfet_g5v0d10v5_FMWM9G
+C0 S VSUBS -2.02385f
+.ends
+

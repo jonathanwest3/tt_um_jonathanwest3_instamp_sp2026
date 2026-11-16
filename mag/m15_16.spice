@@ -1,0 +1,49 @@
+* SPICE3 file created from m15_16.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_g5v0d10v5_T8Q8WP a_258_n1518# a_1116_n1430# a_1574_n1430#
++ a_200_n1430# a_n1632_n1430# a_658_n1430# a_n1116_n1518# a_n1174_n1430# a_n1574_n1518#
++ a_n716_n1430# a_1174_n1518# a_n200_n1518# a_716_n1518# a_n1768_n1652# a_n258_n1430#
++ a_n658_n1518#
+X0 a_1574_n1430# a_1174_n1518# a_1116_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=4.147 pd=29.18 as=2.0735 ps=14.59 w=14.3 l=2
+X1 a_n1174_n1430# a_n1574_n1518# a_n1632_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=4.147 ps=29.18 w=14.3 l=2
+X2 a_200_n1430# a_n200_n1518# a_n258_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=2.0735 ps=14.59 w=14.3 l=2
+X3 a_n258_n1430# a_n658_n1518# a_n716_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=2.0735 ps=14.59 w=14.3 l=2
+X4 a_n716_n1430# a_n1116_n1518# a_n1174_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=2.0735 ps=14.59 w=14.3 l=2
+X5 a_658_n1430# a_258_n1518# a_200_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=2.0735 ps=14.59 w=14.3 l=2
+X6 a_1116_n1430# a_716_n1518# a_658_n1430# a_n1768_n1652# sky130_fd_pr__nfet_g5v0d10v5 ad=2.0735 pd=14.59 as=2.0735 ps=14.59 w=14.3 l=2
+C0 a_200_n1430# a_n200_n1518# 1.03314f
+C1 a_n658_n1518# a_n716_n1430# 1.03314f
+C2 a_n258_n1430# a_n658_n1518# 1.01391f
+C3 a_n1574_n1518# a_n1632_n1430# 1.03314f
+C4 a_1116_n1430# a_716_n1518# 1.03338f
+C5 a_n258_n1430# a_n200_n1518# 1.01391f
+C6 a_n1116_n1518# a_n1174_n1430# 1.01391f
+C7 a_n1174_n1430# a_n1574_n1518# 1.01391f
+C8 a_n1116_n1518# a_n716_n1430# 1.03339f
+C9 a_1116_n1430# a_1174_n1518# 1.03314f
+C10 a_1574_n1430# a_1174_n1518# 1.01391f
+C11 a_258_n1518# a_658_n1430# 1.01391f
+C12 a_658_n1430# a_716_n1518# 1.01391f
+C13 a_200_n1430# a_258_n1518# 1.03339f
+C14 a_1574_n1430# a_n1768_n1652# 1.31166f
+C15 a_n1632_n1430# a_n1768_n1652# 1.35086f
+.ends
+
+.subckt sky130_fd_pr__nfet_g5v0d10v5_XPP34T B D S G
+X0 S G D B sky130_fd_pr__nfet_g5v0d10v5 ad=2.9 pd=20.58 as=2.9 ps=20.58 w=10 l=5
+C0 S B 1.74083f
+C1 D B 1.74083f
+.ends
+
+.subckt m15_16
+Xsky130_fd_pr__nfet_g5v0d10v5_T8Q8WP_0 G D sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D
++ D D sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D G sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D
++ G D G G G S sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D G sky130_fd_pr__nfet_g5v0d10v5_T8Q8WP
+Xsky130_fd_pr__nfet_g5v0d10v5_XPP34T_0 S sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D S
++ G sky130_fd_pr__nfet_g5v0d10v5_XPP34T
+C0 D G 2.166f
+C1 sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D G 2.5421f
+C2 sky130_fd_pr__nfet_g5v0d10v5_XPP34T_0/D S 1.71794f
+C3 D S 1.09053f
+.ends
+
