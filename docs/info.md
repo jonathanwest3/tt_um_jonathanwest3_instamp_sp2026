@@ -9,11 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+4 op amp instrumentation amp.  Requires a gain resistor (17k gives gain of 10) and a 100nF cap from Vref to GND.
+Also requires a VDD/2 voltage at Vmid
 
 ## How to test
 
-Explain how to use your project
+Standard instumentaion amp.  Connect Rg, Vref cap and Vmid and put analog signal into Vp.  Can tie Vn to Vmid.
 
 ## External hardware
 
