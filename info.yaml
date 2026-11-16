@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "instamp_spring_2026"      # Project title
+  title:        "tt_um_jonathanwest3_instamp_sp2026"      # Project title
   author:       "Jonathan West"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Instrumentaion Amplifier"      # One line description of what your project does
@@ -15,11 +15,10 @@ project:
   uses_vapwr: true       # Set to true if your project uses second analog power supply (VAPWR) in addition to 1.8V (VDPWR)
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "instamp_spring_2026"
+  top_module:  "tt_um_jonathanwest3_instamp_sp2026"
 
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
