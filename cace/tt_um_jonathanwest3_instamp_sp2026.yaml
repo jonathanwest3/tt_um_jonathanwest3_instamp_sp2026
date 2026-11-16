@@ -10,7 +10,7 @@ cace_format: 5.2
 authorship:
   designer: Jonathan West
   company: Weber State Univeristy
-  creation_date: Nov 16, 2026
+  creation_date: Nov 4, 2026
   license: Apache 2.0
 
 paths:
@@ -72,12 +72,12 @@ pins:
     Vmax: 0.3
 
 default_conditions:
-  Vvdd:
+  vdd:
     description: Analog power supply voltage
     display: vdd
     unit: V
     typical: 3.3
-  Vvss:
+  vss:
     description: Analog ground
     display: vss
     unit: V
@@ -92,10 +92,14 @@ default_conditions:
     display: CLoad
     unit: fF
     maximum: 100
+  Vmid:
+    description: Mid supply reference voltage
+    display: Vmid
+    typical: 1.65
   Vcm:
     description: Common-mode input voltage
     display: Vcm
-    typical: 1.65
+    typical: 0
   Vdiff:
     description: Differential input voltage
     display: Vdiff
@@ -104,15 +108,12 @@ default_conditions:
     description: Ambient temperature
     display: Temp
     unit: °C
-    minimum: 0
     typical: 27
-    maximum: 100
+    maximum: 80
   corner:
     description: Process corner
     display: Corner
-    minimum: ss
     typical: tt
-    maximum: ff
   iterations:
     description: Iterations to run
     display: Iterations
@@ -120,11 +121,57 @@ default_conditions:
     maximum: 10
     step: linear
     stepsize: 1
+  Rg:
+    unit: kΩ
+    typical: 90
+  Rload:
+    unit: kΩ
+    typical: 1000
+  Cload:
+    unit: pF
+    typical: 10
 
 parameters:
-  gain_10k:
-    description: open loop voltage gain
-    display: Gain with 10k Rg
+  gain_20:
+    description: Gain set for x20 (26 dB)
+    display: Gain 26dB
+    unit: dB
+    spec:
+      gain:
+        minimum:
+          value: 24
+          fail: true
+        typical:
+          value: 26
+        maximum:
+          value: 28
+          fail: true
+      bw:
+        unit: kHz
+        minimum:
+          value: 100
+          fail: true
+        typical:
+          value: 300
+    tool:
+      ngspice:
+        template: gain.sch
+        format: ascii
+        suffix: .data
+        variables: [gain, bw]
+    plot:
+      gain_vs_temperature:
+        type: xyplot
+        xaxis: temperature
+        yaxis: gain
+    conditions:
+      Rg:
+        unit: kΩ
+        typical: 8
+        
+  gain_10:
+    description: Gain set for x10 (20dB)
+    display: Gain (20dB)
     unit: dB
     spec:
       gain:
@@ -132,16 +179,23 @@ parameters:
           value: 18
           fail: true
         typical:
-          value: 25
+          value: 20
         maximum:
-          value: 30
+          value: 22
+          fail: false
+      bw:
+        unit: kHz
+        minimum:
+          value: 100
           fail: true
+        typical:
+          value: 200
     tool:
       ngspice:
-        template: avo.sch
+        template: gain.sch
         format: ascii
         suffix: .data
-        variables: [gain]
+        variables: [gain, bw]
     plot:
       gain_vs_temperature:
         type: xyplot
@@ -151,19 +205,123 @@ parameters:
     conditions:
       Rg:
         unit: kΩ
-        typical: 10
-      Vvdd:
-        typical: 3.3
-      Vcm:
-        typical: 1.65
-        note: AC analysis not dependent on Vcm
-      temperature:
-        unit: °C
-        step: linear
-        stepsize: 20
-        minimum: 0
-        maximum: 100
-        
+        typical: 17
+
+
+  rise_fall:
+    description: Rise, fall and slew rates
+    display: Rise, fall and slew
+    spec:
+      rise:
+        unit: ns
+        minimum:
+          value: 100
+          fail: false
+        typical:
+          value: 300
+        maximum: 
+          value: 500 
+          fail: true
+      fall:
+        unit: ns
+        minimum:
+          value: 100
+          fail: false
+        typical:
+          value: 300
+        maximum: 
+          value: 500
+          fail: true
+      sr_rise:
+        unit: V/us
+        minimum:
+          value: 0.5
+          fail: true
+        typical:
+          value: 0.8
+        maximum: 
+          value: 1.5
+          fail: false
+      sr_fall:
+        unit: V/us
+        minimum:
+          value: 0.5
+          fail: true
+        typical:
+          value: 0.8
+        maximum: 
+          value: 1.5
+          fail: false
+      over:
+        unit: mV
+        typical:
+          value: 1
+        maximum: 
+          value: 3
+          fail: false
+      under:
+        unit: mV
+        typical:
+          value: 1
+        maximum: 
+          value: 3
+          fail: false
+      ivdd:
+        unit: uA
+        typical:
+          value: 500
+        maximum: 
+          value: 750
+          fail: false
+    tool:
+      ngspice:
+        template: rise.sch
+        format: ascii
+        suffix: .data
+        variables: [rise, fall, sr_rise, sr_fall, over, under, ivdd]
+  cmrr:
+    description: CMRR and PSRR
+    display: CMRR and PSRR
+    spec:
+      CMRR:
+        unit: dB
+        minimum:
+          value: 60
+          fail: false
+        typical:
+          value: 70
+      PSRR:
+        unit: dB
+        minimum:
+          value: 60
+          fail: false
+        typical:
+          value: 70
+    tool:
+      ngspice:
+        template: cmrr.sch
+        format: ascii
+        suffix: .data
+        variables: [CMRR, PSRR]
+
+  noise:
+    description: Noise
+    display: Noise
+    spec:
+      noise:
+        unit: uV
+        typical:
+          value: 100
+        maximum: 
+          value: 300
+          fail: false
+    tool:
+      ngspice:
+        template: noise.sch
+        format: ascii
+        suffix: .data
+        variables: [noise]
+
   netgen_lvs:
     description: Netgen LVS
     display: Netgen LVS
@@ -174,4 +332,24 @@ parameters:
     tool:
       netgen_lvs:
         script: run_project_lvs.tcl
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc
+
+  magic_antenna:
+    description: Magic Antenna
+    display: Magic Antenna
+    spec:
+      antenna_violations:
+        maximum:
+          value: 0
+    tool:
+      magic_antenna_check
 

@@ -10,50 +10,44 @@ T {Drawn by J West
 November 4, 2026
 Revision 0
 } 1360 -180 0 0 0.4 0.4 {}
-N 1750 -540 1770 -540 {
+N 1720 -500 1740 -500 {
 lab=Vout}
-N 1130 -400 1130 -390 {lab=GND}
-N 970 -520 970 -510 {lab=#net1}
-N 970 -520 1130 -520 {lab=#net1}
-N 970 -450 1050 -450 {lab=#net2}
-N 1050 -480 1050 -450 {lab=#net2}
-N 1050 -480 1130 -480 {lab=#net2}
-N 1070 -460 1130 -460 {lab=Vcm}
-N 1070 -460 1070 -400 {lab=Vcm}
-N 850 -400 1070 -400 {lab=Vcm}
-N 1430 -440 1520 -440 {lab=#net3}
-N 1520 -380 1520 -370 {lab=GND}
-N 1090 -290 1090 -270 {lab=GND}
-N 1090 -370 1090 -350 {lab=VDD}
-N 850 -300 850 -290 {lab=Vmid}
-N 1090 -440 1130 -440 {lab=Vmid}
-N 850 -540 1130 -540 {lab=Vin}
-N 1090 -420 1130 -420 {lab=VDD}
-N 1630 -440 1630 -430 {lab=GND}
-N 1630 -450 1630 -440 {lab=GND}
-N 1680 -440 1750 -440 {lab=GND}
-N 1750 -450 1750 -440 {lab=GND}
-N 1750 -540 1750 -510 {lab=Vout}
-N 1630 -540 1630 -510 {lab=Vout}
-N 850 -540 850 -500 {lab=Vin}
-N 850 -440 850 -400 {lab=Vcm}
-N 850 -400 850 -360 {lab=Vcm}
-N 1680 -540 1750 -540 {
+N 940 -480 940 -470 {lab=#net1}
+N 940 -480 1100 -480 {lab=#net1}
+N 940 -410 1020 -410 {lab=#net2}
+N 1020 -440 1020 -410 {lab=#net2}
+N 1040 -420 1040 -360 {lab=Vcm}
+N 820 -360 1040 -360 {lab=Vcm}
+N 1400 -480 1490 -480 {lab=#net3}
+N 1490 -420 1490 -410 {lab=GND}
+N 1060 -290 1060 -270 {lab=GND}
+N 1060 -370 1060 -350 {lab=VDD}
+N 820 -260 820 -250 {lab=Vmid}
+N 820 -500 1100 -500 {lab=Vin}
+N 1060 -420 1100 -420 {lab=VDD}
+N 1600 -400 1600 -390 {lab=GND}
+N 1600 -410 1600 -400 {lab=GND}
+N 1650 -400 1720 -400 {lab=GND}
+N 1720 -410 1720 -400 {lab=GND}
+N 1720 -500 1720 -470 {lab=Vout}
+N 1600 -500 1600 -470 {lab=Vout}
+N 820 -500 820 -460 {lab=Vin}
+N 820 -400 820 -360 {lab=Vcm}
+N 820 -360 820 -320 {lab=Vcm}
+N 1650 -500 1720 -500 {
 lab=Vout}
-N 1430 -540 1630 -540 {
+N 1400 -500 1600 -500 {
 lab=Vout}
-N 1090 -420 1090 -370 {lab=VDD}
-N 1630 -540 1680 -540 {lab=Vout}
-N 1630 -440 1680 -440 {lab=GND}
-N 970 -300 970 -290 {lab=GND}
-N 970 -390 970 -360 {lab=Vmid}
-N 970 -390 1080 -390 {lab=Vmid}
-N 1080 -440 1080 -390 {lab=Vmid}
-N 1080 -440 1090 -440 {lab=Vmid}
-N 850 -290 850 -260 {lab=Vmid}
-C {devices/vsource.sym} 850 -330 0 0 {name=Vcm value="DC CACE\{Vcm\}" savecurrent=false}
-C {devices/lab_wire.sym} 1770 -540 0 0 {name=p25 sig_type=std_logic lab=Vout}
-C {devices/vsource.sym} 1090 -320 0 0 {name=vdd value="DC CACE\{vdd\}" savecurrent=false}
+N 1060 -420 1060 -370 {lab=VDD}
+N 1600 -500 1650 -500 {lab=Vout}
+N 1600 -400 1650 -400 {lab=GND}
+N 820 -250 820 -220 {lab=Vmid}
+N 1020 -460 1020 -440 {lab=#net2}
+N 1020 -460 1100 -460 {lab=#net2}
+N 1040 -440 1040 -420 {lab=Vcm}
+N 1040 -440 1100 -440 {lab=Vcm}
+N 1080 -400 1080 -390 {lab=GND}
+N 1080 -400 1100 -400 {lab=GND}
 C {devices/code_shown.sym} 100 -340 0 0 {name=CONTROL only_toplevel=false value="
 .option sparse
 .control
@@ -83,33 +77,32 @@ C {devices/code_shown.sym} 70 -700 0 0 {name=SETUP only_toplevel=false value="* 
 .option warn=1
 .option rshunt=1e12
 "}
-C {devices/lab_wire.sym} 990 -400 0 1 {name=p4 sig_type=std_logic lab=Vcm}
-C {instamp.sym} 1280 -500 0 0 {name=x1}
-C {devices/res.sym} 970 -480 0 0 {name=Rg
+C {devices/vsource.sym} 820 -290 0 0 {name=Vcm value="DC CACE\{Vcm\}" savecurrent=false}
+C {devices/lab_wire.sym} 1740 -500 0 0 {name=p25 sig_type=std_logic lab=Vout}
+C {devices/vsource.sym} 1060 -320 0 0 {name=vdd value="DC CACE\{vdd\}" savecurrent=false}
+C {devices/lab_wire.sym} 960 -360 0 1 {name=p4 sig_type=std_logic lab=Vcm}
+C {devices/res.sym} 940 -440 0 0 {name=Rg
 value=CACE\{Rg\}
 device=resistor}
-C {capa.sym} 1520 -410 0 0 {name=Cref
+C {capa.sym} 1490 -450 0 0 {name=Cref
 m=1
 value=100n
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 1520 -370 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} 1090 -270 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 1130 -390 0 0 {name=l5 lab=GND}
-C {devices/lab_wire.sym} 1090 -420 0 1 {name=p5 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 960 -540 0 1 {name=p6 sig_type=std_logic lab=Vin}
-C {devices/res.sym} 1630 -480 0 0 {name=Rload
+C {devices/gnd.sym} 1490 -410 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} 1060 -270 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} 1080 -390 0 0 {name=l5 lab=GND}
+C {devices/lab_wire.sym} 1060 -420 0 1 {name=p5 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 930 -500 0 1 {name=p6 sig_type=std_logic lab=Vin}
+C {devices/res.sym} 1600 -440 0 0 {name=Rload
 value=CACE\{Rload\}
 device=resistor}
-C {capa.sym} 1750 -480 0 0 {name=Cload
+C {capa.sym} 1720 -440 0 0 {name=Cload
 m=1
 value=CACE\{Cload\}
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 1630 -430 0 0 {name=l3 lab=GND}
-C {vsource.sym} 850 -470 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
-C {devices/vsource.sym} 970 -330 0 0 {name=Vmid value="DC CACE\{Vmid\}" savecurrent=false}
-C {devices/gnd.sym} 970 -290 0 0 {name=Vmid1 lab=GND
-value="DC CACE\{Vmid\}"}
-C {devices/lab_wire.sym} 1080 -440 0 1 {name=p1 sig_type=std_logic lab=Vmid}
-C {devices/lab_wire.sym} 850 -260 0 1 {name=p2 sig_type=std_logic lab=Vmid}
+C {devices/gnd.sym} 1600 -390 0 0 {name=l3 lab=GND}
+C {vsource.sym} 820 -430 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
+C {devices/lab_wire.sym} 820 -220 0 1 {name=p2 sig_type=std_logic lab=Vmid}
+C {tt_um_jonathanwest3_instamp_sp2026.sym} 1250 -210 0 0 {name=x1}

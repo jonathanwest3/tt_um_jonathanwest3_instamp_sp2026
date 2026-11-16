@@ -12,23 +12,19 @@ Revision 0
 } -220 120 0 0 0.4 0.4 {}
 N 610 -240 630 -240 {
 lab=Vout}
-N -10 -100 -10 -90 {lab=GND}
 N -170 -220 -170 -210 {lab=#net1}
 N -170 -220 -10 -220 {lab=#net1}
 N -170 -150 -90 -150 {lab=#net2}
 N -90 -180 -90 -150 {lab=#net2}
-N -90 -180 -10 -180 {lab=#net2}
-N -70 -160 -10 -160 {lab=Vcm}
 N -70 -160 -70 -100 {lab=Vcm}
 N -290 -100 -70 -100 {lab=Vcm}
-N 290 -140 380 -140 {lab=#net3}
-N 380 -80 380 -70 {lab=GND}
-N -50 10 -50 30 {lab=GND}
-N -50 -70 -50 -50 {lab=VDD}
+N 290 -220 380 -220 {lab=#net3}
+N 380 -160 380 -150 {lab=GND}
+N -50 -30 -50 -10 {lab=GND}
+N -50 -110 -50 -90 {lab=VDD}
 N -290 0 -290 10 {lab=Vmid}
-N -50 -140 -10 -140 {lab=Vcm}
 N -290 -240 -10 -240 {lab=Vin}
-N -50 -120 -10 -120 {lab=VDD}
+N -50 -160 -10 -160 {lab=VDD}
 N 490 -140 490 -130 {lab=GND}
 N 490 -150 490 -140 {lab=GND}
 N 540 -140 610 -140 {lab=GND}
@@ -42,18 +38,19 @@ N 540 -240 610 -240 {
 lab=Vout}
 N 290 -240 490 -240 {
 lab=Vout}
-N -50 -120 -50 -70 {lab=VDD}
+N -50 -160 -50 -110 {lab=VDD}
 N 490 -240 540 -240 {lab=Vout}
 N 490 -140 540 -140 {lab=GND}
-N -170 0 -170 10 {lab=GND}
-N -170 -90 -170 -60 {lab=Vcm}
-N -170 -90 -60 -90 {lab=Vcm}
-N -60 -140 -60 -90 {lab=Vcm}
-N -60 -140 -50 -140 {lab=Vcm}
 N -290 10 -290 40 {lab=Vmid}
+N -90 -200 -90 -180 {lab=#net2}
+N -90 -200 -10 -200 {lab=#net2}
+N -70 -180 -70 -160 {lab=Vcm}
+N -70 -180 -10 -180 {lab=Vcm}
+N -30 -140 -30 -130 {lab=GND}
+N -30 -140 -10 -140 {lab=GND}
 C {devices/vsource.sym} -290 -30 0 0 {name=Vcm value="DC CACE\{Vcm\}" savecurrent=false}
 C {devices/lab_wire.sym} 630 -240 0 0 {name=p25 sig_type=std_logic lab=Vout}
-C {devices/vsource.sym} -50 -20 0 0 {name=vdd value="DC CACE\{vdd\}" savecurrent=false}
+C {devices/vsource.sym} -50 -60 0 0 {name=vdd value="DC CACE\{vdd\}" savecurrent=false}
 C {devices/code_shown.sym} -1000 -330 0 0 {name=CONTROL only_toplevel=false value=".control
 set gnuplot_terminal=png/quit
 alter Vdiff ac=1
@@ -110,19 +107,18 @@ C {devices/code_shown.sym} -1020 -590 0 0 {name=SETUP only_toplevel=false value=
 .option rshunt=1e12
 "}
 C {devices/lab_wire.sym} -150 -100 0 1 {name=p4 sig_type=std_logic lab=Vcm}
-C {instamp.sym} 140 -200 0 0 {name=x1}
 C {devices/res.sym} -170 -180 0 0 {name=Rg
 value=CACE\{Rg\}
 device=resistor}
-C {capa.sym} 380 -110 0 0 {name=Cref
+C {capa.sym} 380 -190 0 0 {name=Cref
 m=1
 value=100n
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 380 -70 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} -50 30 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} -10 -90 0 0 {name=l5 lab=GND}
-C {devices/lab_wire.sym} -50 -120 0 1 {name=p5 sig_type=std_logic lab=VDD}
+C {devices/gnd.sym} 380 -150 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} -50 -10 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} -30 -130 0 0 {name=l5 lab=GND}
+C {devices/lab_wire.sym} -50 -160 0 1 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} -180 -240 0 1 {name=p6 sig_type=std_logic lab=Vin}
 C {devices/res.sym} 490 -180 0 0 {name=Rload
 value=CACE\{Rload\}
@@ -134,8 +130,5 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 490 -130 0 0 {name=l3 lab=GND}
 C {vsource.sym} -290 -170 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
-C {devices/vsource.sym} -170 -30 0 0 {name=Vmid value="DC CACE\{Vmid\}" savecurrent=false}
-C {devices/gnd.sym} -170 10 0 0 {name=Vmid1 lab=GND
-value="DC CACE\{Vmid\}"}
-C {devices/lab_wire.sym} -60 -140 0 1 {name=p1 sig_type=std_logic lab=Vmid}
 C {devices/lab_wire.sym} -290 40 0 1 {name=p2 sig_type=std_logic lab=Vmid}
+C {tt_um_jonathanwest3_instamp_sp2026.sym} 140 50 0 0 {name=x1}
