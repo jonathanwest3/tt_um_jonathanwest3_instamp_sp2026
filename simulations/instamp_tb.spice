@@ -1,0 +1,145 @@
+** sch_path: /home/jwest/ece6120/hw05/xschem/instamp_tb.sch
+**.subckt instamp_tb
+Vdd VDD 0 3.3
+Vdiff Vp Vn sin(0 5m 1k) AC=1
+Vmid Vmid 0 1.65
+Vcm Vn Vmid 0 ac=0
+x2 Vn net2 Vp net1 Vmid Vout Vref VDD 0 instamp
+C2 Vref 0 100n
+Rg net2 net1 10k
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/jwest/.ciel/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.option wnflag=1
+.option savecurrents
+.option rshunt=1e12
+.include ../netlist/rcx/instamp.spice
+.save all
+.control
+op
+write instamp_tb.raw
+set appendwrite
+set gnuplot_terminal=png/quit
+
+* write instamp_tb.raw
+if 0
+* differential gain tran
+  destroy all
+  foreach val 10k 5k 1k
+    alter Rg = $val
+    tran 10u 3m 1m
+  end
+  let Rg10k = tran1.v(vout)
+  let Rg5k = tran2.v(vout)
+  let Rg1k = tran3.v(vout)
+  gnuplot tran Rg10k Rg5k Rg1k
+*+ title 'Differential gain'
++ xlabel 'Time' ylabel 'Volts'
+endif
+
+* run ac on schematic as drawn
+if 1
+  destroy all
+* differential gain ac
+  ac dec 100 1 1Meg
+  plot db(v(vout))
+endif
+
+* run ac cmrr and psrr sweeps
+if 0
+  destroy all
+* differential gain ac
+  alter vdiff ac=1
+  alter vcm ac=0
+  alter vdd ac=0
+  foreach val 10k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 1Meg
+  end
+  alter vdiff ac=0
+  alter vcm ac=1
+  alter vdd ac=0
+  foreach val 10k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 1Meg
+  end
+  alter vdiff ac=0
+  alter vcm ac=0
+  alter vdd ac=1
+  foreach val 10k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 1Meg
+  end
+  alter vdiff ac=0
+  alter vcm ac=0
+  alter vdd ac=0
+  alter vmid ac=1
+  foreach val 10k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 1Meg
+  end
+  let Rg10k = db(ac1.v(vout))
+  let Rg5k = db(ac2.v(vout))
+  let Rg1k = db(ac3.v(vout))
+  let Rg10k_cm = Rg10k-db(ac4.v(vout))
+  let Rg5k_cm = Rg5k-db(ac5.v(vout))
+  let Rg1k_cm = Rg1k-db(ac6.v(vout))
+  let Rg10k_psh = Rg10k-db(ac7.v(vout))
+  let Rg5k_psh = Rg5k-db(ac8.v(vout))
+  let Rg1k_psh = Rg1k-db(ac9.v(vout))
+  let Rg10k_vmid = Rg10k-db(ac10.v(vout))
+  let Rg5k_vmid = Rg5k-db(ac11.v(vout))
+  let Rg1k_vmid = Rg1k-db(ac12.v(vout))
+
+  gnuplot ac Rg10k Rg5k Rg1k
++ title 'Differential gain'
++ xlabel 'Freq' ylabel 'Gain dB'
+  gnuplot cmrr Rg10k_cm Rg5k_cm Rg1k_cm
++ title 'CMRR'
++ xlabel 'Freq' ylabel 'Gain dB'
+  gnuplot psrr Rg10k_psh Rg5k_psh Rg1k_psh
++ title 'PSRR'
++ xlabel 'Freq' ylabel 'Gain dB'
+  gnuplot vmid_rej Rg10k_vmid Rg5k_vmid Rg1k_vmid
++ title 'Vmid Rejection'
++ xlabel 'Freq' ylabel 'Gain dB'
+
+endif
+
+if 0
+* common mode gain
+  alter vdiff ac=0
+  alter vcm ac=1
+  foreach val 90k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 10Meg
+  end
+
+  plot db(ac1.V(Vout)) db(ac2.V(Vout))
++ db(ac3.V(Vout)) title 'Mag Vout'
+
+* power supply gain
+  alter vcm ac=0
+  alter vdd ac=1
+  foreach val 90k 5k 1k
+    alter Rg = $val
+    ac dec 100 1 10Meg
+  end
+
+  plot db(ac4.V(Vout)) db(ac5.V(Vout))
++ db(ac6.V(Vout)) title 'Mag Vout'
+
+endif
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.GLOBAL Vmid
+.end

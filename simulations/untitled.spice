@@ -1,0 +1,6 @@
+** sch_path: /home/jwest/ece6120/hw05/xschem/untitled.sch
+**.subckt untitled
+XM1 net1 net2 net3 net4 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=10 ad=1.45 as=1.74 pd=12.9 ps=15.48 nrd=0.029 nrs=0.029 sa=0
++ sb=0 sd=0 mult=1
+**.ends
+.end

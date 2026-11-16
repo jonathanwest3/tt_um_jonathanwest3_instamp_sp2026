@@ -1,0 +1,45 @@
+** sch_path: /home/jwest/ece6120/hw05/xschem/bandgap_tb.sch
+**.subckt bandgap_tb
+Vdd VDD 0 3.3
+C1 Vref 0 100n
+x1 Vref VDD 0 bandgap
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/jwest/.ciel/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.option wnflag=1
+.include ../gds/bandgap.spice
+.save all
+.control
+set gnuplot_terminal=png/quit
+
+op
+#print x1.Vg1 x1.ve1 x1.vg10 x1.vg12 x1.vg2 x1.vg3 x1.vg5 x1.vs5
+#tran 10n 10u
+#plot V(Vref) title 'Vref vs time'
+
+dc VDD 3.0 3.5 0.1
+gnuplot bandgap_vref_vs_vdd V(Vref)
++ title 'Vref vs Vdd'
++ xlabel 'VDD' ylabel 'Vref'
+#plot V(Vref) vs V(Vdd) title 'Vref vs Vdd'
+
+dc VDD 3.0 3.5 0.02 TEMP -40 40 20
+gnuplot bandgap_vref_vs_vdd_vs_temp V(Vref)
++ title 'Vref vs Vdd vs Temp (-40 to 40C)'
++ xlabel 'VDD' ylabel 'Vref'
+#plot V(Vref) Vs V(Vdd) title 'Vref vs Vdd vs Temp'
+
+#dc TEMP -40 40 10
+#plot V(Vref) title 'Vref vs Temp at VDD=3.3'
+quit
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.end
