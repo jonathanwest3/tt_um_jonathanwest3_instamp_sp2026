@@ -1,4 +1,4 @@
-** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
+** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
 .subckt bandgap Vref GND VDD
 *.PININFO Vref:O GND:I VDD:I
 XM4 Vg3 Vg3 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=1 ad=5.8 as=5.8 pd=40.58 ps=40.58 nrd=0.0145 nrs=0.0145 sa=0 sb=0

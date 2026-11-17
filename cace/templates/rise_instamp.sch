@@ -49,14 +49,16 @@ N -320 -180 -220 -180 {lab=Vmid}
 N -220 -240 -220 -180 {lab=Vmid}
 N -220 -240 -160 -240 {lab=Vmid}
 C {devices/code_shown.sym} -1120 -200 0 0 {name=CONTROL only_toplevel=false value=".control
+let t_settle=1m
 let per=5u
-let t_vl=per/2
-let t_vh=per*1.5
-let tstop=per*3
+let t_vl=per/2+t_settle
+let t_vh=per*1.5+t_settle
+let tstop=per*3+t_settle
 let tstep=per/100
+let t_delay=t_settle+per
 alter Rg=90k
-alter @Vdiff[pulse] [ 0 100m $&per 1n 1n $&per $&tstop ] 
-tran $&tstep $&tstop
+alter @Vdiff[pulse] [ 0 100m $&t_delay 1n 1n $&per $&tstop ] 
+tran $&tstep $&tstop, $&t_settle
 plot V(Vin,vcm) V(vout,vcm)
 meas tran v_min MIN V(Vout)
 meas tran v_max MAX V(Vout)
@@ -106,7 +108,7 @@ value=CACE\{Rg\}
 device=resistor}
 C {capa.sym} 230 -210 0 0 {name=Cref
 m=1
-value=100n
+value=10n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 230 -170 0 0 {name=l2 lab=GND}
