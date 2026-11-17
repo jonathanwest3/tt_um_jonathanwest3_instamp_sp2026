@@ -330,8 +330,7 @@ parameters:
         maximum:
           value: 0
     tool:
-      netgen_lvs:
-        script: run_project_lvs.tcl
+      netgen_lvs
 
   magic_drc:
     description: Magic DRC

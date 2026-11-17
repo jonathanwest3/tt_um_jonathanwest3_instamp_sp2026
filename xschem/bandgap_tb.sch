@@ -26,15 +26,15 @@ to a subcircuit of the same name in
 ../gds/bandgap.spice
 Make sure that bandgap.spice has a subcircuit defined
 in it by running "ext2spice hierarchy on"} 270 -170 0 0 0.4 0.4 {}
-N 360 -240 360 -210 {lab=0}
-N 360 -330 360 -300 {lab=VDD}
+N 170 -230 170 -200 {lab=0}
+N 170 -320 170 -290 {lab=VDD}
 N 570 -350 630 -350 {lab=Vref}
 N 630 -350 630 -330 {lab=Vref}
 N 630 -270 630 -240 {lab=0}
-N 570 -310 580 -310 {lab=0}
-N 570 -330 580 -330 {lab=VDD}
-C {vsource.sym} 360 -270 0 0 {name=Vdd value=3.3 savecurrent=false}
-C {gnd.sym} 360 -210 0 0 {name=l1 lab=0}
+N 240 -350 270 -350 {lab=0}
+N 220 -350 240 -350 {lab=0}
+C {vsource.sym} 170 -260 0 0 {name=Vdd value=3.3 savecurrent=false}
+C {gnd.sym} 170 -200 0 0 {name=l1 lab=0}
 C {code.sym} 30 -160 0 0 {
 name=TT_MODELS
 only_toplevel=true
@@ -45,7 +45,7 @@ value="
 "
 spice_ignore=false
       }
-C {vdd.sym} 360 -330 0 0 {name=l3 lab=VDD}
+C {vdd.sym} 170 -320 0 0 {name=l3 lab=VDD}
 C {gnd.sym} 630 -240 0 0 {name=l2 lab=0}
 C {capa.sym} 630 -300 0 0 {name=C1
 m=1
@@ -53,14 +53,13 @@ value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} 620 -350 0 0 {name=p1 sig_type=std_logic lab=Vref}
-C {bandgap.sym} 480 -350 0 0 {name=x1}
-C {vdd.sym} 580 -330 1 0 {name=l4 lab=VDD}
-C {gnd.sym} 580 -310 0 0 {name=l5 lab=0}
-C {code.sym} 20 -350 0 0 {name=NGSPICE1
+C {bandgap.sym} 420 -340 0 0 {name=x1}
+C {gnd.sym} 220 -350 0 0 {name=l5 lab=0}
+C {code.sym} 20 -350 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .option wnflag=1 
-.include ../gds/bandgap.spice
+*.include ../gds/bandgap.spice
 .save all
 .control
 set gnuplot_terminal=png/quit
@@ -84,6 +83,7 @@ gnuplot bandgap_vref_vs_vdd_vs_temp V(Vref)
 
 #dc TEMP -40 40 10
 #plot V(Vref) title 'Vref vs Temp at VDD=3.3'
-quit
+
 .endc
 " }
+C {lab_wire.sym} 270 -330 0 0 {name=p2 sig_type=std_logic lab=VDD}

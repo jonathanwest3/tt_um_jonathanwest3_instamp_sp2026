@@ -1,0 +1,80 @@
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
+.subckt opamp Vref Vout Vp Vn VDD GND
+*.PININFO Vout:O Vref:I Vp:I Vn:I GND:I VDD:I
+XM1 Vg1 Vg1 net1 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=3.33 nf=1 ad=0.9657 as=0.9657 pd=7.24 ps=7.24 nrd=0.0870870870870871
++ nrs=0.0870870870870871 sa=0 sb=0 sd=0 mult=3 m=3
+XM2 net1 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0
++ sd=0 mult=1
+XM4 net2 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0
++ sd=0 mult=1
+XM3 Vg5 Vg1 net2 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=3.33 nf=1 ad=0.9657 as=0.9657 pd=7.24 ps=7.24 nrd=0.0870870870870871
++ nrs=0.0870870870870871 sa=0 sb=0 sd=0 mult=3 m=3
+XMr1 net6 Vref GND GND sky130_fd_pr__nfet_g5v0d10v5 L=8 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0
++ sd=0 mult=1
+XMr2 VgR2 VgR2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0
++ sd=0 mult=1
+XMr3 Vg1 VgR2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0
++ sd=0 mult=1
+XM32 net3 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=1
+XM31 Vs29 Vg1 net3 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=1 ad=1.9314 as=1.9314 pd=13.9 ps=13.9 nrd=0.0435435435435435
++ nrs=0.0435435435435435 sa=0 sb=0 sd=0 mult=3 m=3
+XM15 Vg11 Vg1 Vd10 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=14.3 nf=1 ad=4.147 as=4.147 pd=29.18 ps=29.18 nrd=0.0202797202797203
++ nrs=0.0202797202797203 sa=0 sb=0 sd=0 mult=7 m=7
+XM16 Vd10 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=1
+XM18 Vd9 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0 sd=0
++ mult=1
+XM17 Vg28 Vg1 Vd9 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=14.3 nf=1 ad=4.147 as=4.147 pd=29.18 ps=29.18 nrd=0.0202797202797203
++ nrs=0.0202797202797203 sa=0 sb=0 sd=0 mult=7 m=7
+XM20 Vg22 Vg1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=5 W=1.5 nf=1 ad=0.435 as=0.435 pd=3.58 ps=3.58 nrd=0.193333333333333
++ nrs=0.193333333333333 sa=0 sb=0 sd=0 mult=1
+XM26 Vg26 Vg26 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM25 Vd24 Vd24 Vg26 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0
++ sb=0 sd=0 mult=5 m=5
+XM23 Vg27 Vd24 Vg28 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM28 Vout Vg28 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=15 m=15
+XM30 Vd30 Vn Vs29 GND sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=11.11 nf=1 ad=3.2219 as=3.2219 pd=22.8 ps=22.8 nrd=0.0261026102610261
++ nrs=0.0261026102610261 sa=0 sb=0 sd=0 mult=9 m=9
+XM29 Vd29 Vp Vs29 GND sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=11.11 nf=1 ad=3.2219 as=3.2219 pd=22.8 ps=22.8 nrd=0.0261026102610261
++ nrs=0.0261026102610261 sa=0 sb=0 sd=0 mult=9 m=9
+XM5 net4 Vg5 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0
++ sd=0 mult=3 m=3
+XM6 Vg5 Vg5 net4 VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=6.6 nf=1 ad=1.914 as=1.914 pd=13.78 ps=13.78 nrd=0.0439393939393939
++ nrs=0.0439393939393939 sa=0 sb=0 sd=0 mult=3 m=3
+XM7 net5 Vg5 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0 sd=0
++ mult=3 m=3
+XM8 Vd8 Vg5 net5 VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=13.2 nf=1 ad=3.828 as=3.828 pd=26.98 ps=26.98 nrd=0.021969696969697
++ nrs=0.021969696969697 sa=0 sb=0 sd=0 mult=3 m=3
+XM09 Vd9 Vp Vd8 Vd8 sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=22.22 nf=1 ad=6.4438 as=6.4438 pd=45.02 ps=45.02 nrd=0.0130513051305131
++ nrs=0.0130513051305131 sa=0 sb=0 sd=0 mult=9 m=9
+XM010 Vd10 Vn Vd8 Vd8 sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=22.22 nf=1 ad=6.4438 as=6.4438 pd=45.02 ps=45.02 nrd=0.0130513051305131
++ nrs=0.0130513051305131 sa=0 sb=0 sd=0 mult=9 m=9
+XM13 Vd29 Vg11 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM14 Vg27 Vg11 Vd29 VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM11 Vd30 Vg11 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM12 Vg11 Vg11 Vd30 VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=5 m=5
+XM021 Vg21 Vg21 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 ad=4.35 as=4.35 pd=30.58 ps=30.58 nrd=0.0193333333333333
++ nrs=0.0193333333333333 sa=0 sb=0 sd=0 mult=5 m=5
+XM022 Vg22 Vg22 Vg21 VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 ad=4.35 as=4.35 pd=30.58 ps=30.58 nrd=0.0193333333333333
++ nrs=0.0193333333333333 sa=0 sb=0 sd=0 mult=5 m=5
+XM24 Vd24 Vg5 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0
++ sd=0 mult=1
+XM27 Vout Vg27 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 ad=4.35 as=4.35 pd=30.58 ps=30.58 nrd=0.0193333333333333
++ nrs=0.0193333333333333 sa=0 sb=0 sd=0 mult=25 m=25
+XM19 Vg28 Vg22 Vg27 VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10 nf=1 ad=2.9 as=2.9 pd=20.58 ps=20.58 nrd=0.029 nrs=0.029 sa=0 sb=0
++ sd=0 mult=15 m=15
+Vmeas_Iref VgR2 net6 0
+.save i(vmeas_iref)
+XC1 Vg27 Vout sky130_fd_pr__cap_mim_m3_1 W=30 L=20 MF=4 m=4
+XC2 Vg28 Vout sky130_fd_pr__cap_mim_m3_1 W=30 L=20 MF=4 m=4
+.ends
+.GLOBAL VDD
+.GLOBAL GND

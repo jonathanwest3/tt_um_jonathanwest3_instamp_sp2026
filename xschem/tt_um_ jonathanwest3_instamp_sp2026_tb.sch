@@ -21,30 +21,19 @@ S {}
 F {}
 E {}
 N 120 -700 120 -670 {lab=Vp}
-N 380 -690 380 -680 {lab=#net1}
-N 380 -680 390 -680 {lab=#net1}
-N 120 -700 390 -700 {lab=Vp}
 N 120 -590 120 -580 {lab=Vn}
 N 120 -610 120 -590 {lab=Vn}
-N 730 -680 730 -660 {lab=Vref}
-N 730 -600 730 -570 {lab=0}
-N 680 -680 730 -680 {lab=Vref}
-N 680 -700 780 -700 {lab=Vout}
-N 360 -600 380 -600 {lab=0}
-N 360 -600 360 -590 {lab=0}
-N 850 -630 850 -610 {lab=0}
-N 780 -630 780 -610 {lab=0}
-N 780 -700 850 -700 {lab=Vout}
-N 850 -700 850 -690 {lab=Vout}
-N 780 -700 780 -690 {lab=Vout}
-N 260 -690 380 -690 {lab=#net1}
-N 260 -630 290 -630 {lab=#net2}
-N 290 -660 290 -630 {lab=#net2}
-N 290 -660 380 -660 {lab=#net2}
-N 250 -620 250 -590 {lab=Vn}
-N 250 -620 310 -620 {lab=Vn}
-N 310 -640 310 -620 {lab=Vn}
-N 310 -640 390 -640 {lab=Vn}
+N 880 -680 880 -660 {lab=Vref}
+N 880 -600 880 -570 {lab=0}
+N 830 -680 880 -680 {lab=Vref}
+N 830 -700 930 -700 {lab=Vout}
+N 420 -750 440 -750 {lab=0}
+N 420 -750 420 -740 {lab=0}
+N 1000 -630 1000 -610 {lab=0}
+N 930 -630 930 -610 {lab=0}
+N 930 -700 1000 -700 {lab=Vout}
+N 1000 -700 1000 -690 {lab=Vout}
+N 930 -700 930 -690 {lab=Vout}
 N 120 -590 250 -590 {lab=Vn}
 C {vsource.sym} 50 -510 0 0 {name=Vdd value=3.3 savecurrent=false}
 C {code.sym} -220 -400 0 0 {
@@ -63,8 +52,8 @@ C {vsource.sym} -60 -510 0 0 {name=Vmid value=1.65 savecurrent=false}
 C {gnd.sym} -60 -480 0 0 {name=Vmid1 lab=0
 value=1.65}
 C {vdd.sym} -60 -540 0 0 {name=l6 lab=Vmid}
-C {lab_wire.sym} 270 -700 0 0 {name=p3 sig_type=std_logic lab=Vp}
-C {lab_wire.sym} 250 -590 0 0 {name=p4 sig_type=std_logic lab=Vn}
+C {lab_wire.sym} 120 -700 0 0 {name=p3 sig_type=std_logic lab=Vp}
+C {lab_wire.sym} 160 -590 0 0 {name=p4 sig_type=std_logic lab=Vn}
 C {vsource.sym} 120 -550 0 0 {name=Vcm value="0 ac=0" savecurrent=false}
 C {code.sym} -240 -580 0 0 {name=NGSPICE
 only_toplevel=true
@@ -236,33 +225,41 @@ endif
 C {vdd.sym} 120 -520 2 0 {name=l4 lab=Vmid}
 C {gnd.sym} 50 -480 0 0 {name=Vmid2 lab=0
 value=1.65}
-C {gnd.sym} 730 -570 0 0 {name=l1 lab=0}
-C {capa.sym} 730 -630 0 0 {name=Cref
+C {gnd.sym} 880 -570 0 0 {name=l1 lab=0}
+C {capa.sym} 880 -630 0 0 {name=Cref
 m=1
 value=100n
 footprint=1206
 device="ceramic capacitor"}
-C {lab_wire.sym} 730 -680 0 0 {name=p5 sig_type=std_logic lab=Vref}
-C {lab_wire.sym} 750 -700 0 0 {name=p6 sig_type=std_logic lab=Vout
+C {lab_wire.sym} 880 -680 0 0 {name=p5 sig_type=std_logic lab=Vref}
+C {lab_wire.sym} 900 -700 0 0 {name=p6 sig_type=std_logic lab=Vout
 }
-C {res.sym} 260 -660 2 0 {name=Rg
+C {res.sym} 270 -520 2 0 {name=Rg
 value=17k
 footprint=1206
 device=resistor
 m=1}
-C {vdd.sym} 380 -620 3 0 {name=l8 lab=VDD}
-C {gnd.sym} 360 -590 0 0 {name=Vmid3 lab=0
+C {vdd.sym} 440 -770 3 0 {name=l8 lab=VDD}
+C {gnd.sym} 420 -740 0 0 {name=Vmid3 lab=0
 value=1.65}
-C {res.sym} 780 -660 0 0 {name=Rload
+C {res.sym} 930 -660 0 0 {name=Rload
 value=1Meg
 footprint=1206
 device=resistor
 m=1}
-C {capa-2.sym} 850 -660 0 0 {name=Cload
+C {capa-2.sym} 1000 -660 0 0 {name=Cload
 m=1
 value=10p
 footprint=1206
 device=polarized_capacitor}
-C {gnd.sym} 780 -610 0 0 {name=l2 lab=0}
-C {gnd.sym} 850 -610 0 0 {name=l7 lab=0}
-C {tt_um_jonathanwest3_instamp_sp2026.sym} 530 -410 0 0 {name=x1}
+C {gnd.sym} 930 -610 0 0 {name=l2 lab=0}
+C {gnd.sym} 1000 -610 0 0 {name=l7 lab=0}
+C {tt_um_jonathanwest3_instamp_sp2026.sym} 580 -270 0 0 {name=x1}
+C {lab_wire.sym} 270 -550 0 0 {name=p1 sig_type=std_logic lab=Rgp}
+C {lab_wire.sym} 270 -490 3 0 {name=p2 sig_type=std_logic lab=Rgn}
+C {lab_pin.sym} 440 -610 0 0 {name=p7 sig_type=std_logic lab=Vp}
+C {lab_pin.sym} 440 -590 0 0 {name=p8 sig_type=std_logic lab=Rgp}
+C {lab_pin.sym} 440 -570 0 0 {name=p9 sig_type=std_logic lab=Rgn}
+C {lab_pin.sym} 440 -550 0 0 {name=p10 sig_type=std_logic lab=Vn}
+C {lab_pin.sym} 440 -530 0 0 {name=p11 sig_type=std_logic lab=Vout}
+C {lab_pin.sym} 440 -510 0 0 {name=p12 sig_type=std_logic lab=Vref}

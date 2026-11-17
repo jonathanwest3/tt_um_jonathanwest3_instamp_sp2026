@@ -125,4 +125,4 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 310 -250 0 0 {name=l3 lab=GND}
 C {vsource.sym} -470 -290 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
 C {devices/lab_wire.sym} -470 -80 0 1 {name=p2 sig_type=std_logic lab=Vmid}
-C {tt_um_jonathanwest3_instamp_sp2026.sym} -40 -70 0 0 {name=x1}
+C {tt_um_jonathanwest3_instamp_sp2026.sym} -40 -110 0 0 {name=x1}

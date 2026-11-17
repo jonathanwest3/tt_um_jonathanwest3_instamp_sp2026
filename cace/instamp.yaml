@@ -77,6 +77,11 @@ default_conditions:
     display: vdd
     unit: V
     typical: 3.3
+  vmid:
+    description: Analog mid supply voltage
+    display: vmid
+    unit: V
+    typical: 1.65
   vss:
     description: Analog ground
     display: vss
@@ -123,7 +128,7 @@ default_conditions:
     stepsize: 1
   Rg:
     unit: kΩ
-    typical: 90
+    typical: 17
   Rload:
     unit: kΩ
     typical: 1000
@@ -155,7 +160,7 @@ parameters:
           value: 300
     tool:
       ngspice:
-        template: gain.sch
+        template: gain_instamp.sch
         format: ascii
         suffix: .data
         variables: [gain, bw]
@@ -192,7 +197,7 @@ parameters:
           value: 200
     tool:
       ngspice:
-        template: gain.sch
+        template: gain_instamp.sch
         format: ascii
         suffix: .data
         variables: [gain, bw]
@@ -275,7 +280,7 @@ parameters:
           fail: false
     tool:
       ngspice:
-        template: rise.sch
+        template: rise_instamp.sch
         format: ascii
         suffix: .data
         variables: [rise, fall, sr_rise, sr_fall, over, under, ivdd]
@@ -299,7 +304,7 @@ parameters:
           value: 70
     tool:
       ngspice:
-        template: cmrr.sch
+        template: cmrr_instamp.sch
         format: ascii
         suffix: .data
         variables: [CMRR, PSRR]
@@ -317,7 +322,7 @@ parameters:
           fail: false
     tool:
       ngspice:
-        template: noise.sch
+        template: noise_instamp.sch
         format: ascii
         suffix: .data
         variables: [noise]
