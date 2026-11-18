@@ -35,8 +35,8 @@ N 930 -700 1000 -700 {lab=Vout}
 N 1000 -700 1000 -690 {lab=Vout}
 N 930 -700 930 -690 {lab=Vout}
 N 120 -590 250 -590 {lab=Vn}
-C {vsource.sym} 50 -510 0 0 {name=Vdd value=3.3 savecurrent=false}
-C {code.sym} -220 -400 0 0 {
+C {vsource.sym} 210 -360 0 0 {name=Vdd value=3.3 savecurrent=false}
+C {code.sym} 250 -220 0 0 {
 name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -46,16 +46,16 @@ value="
 "
 spice_ignore=false
       }
-C {vdd.sym} 50 -540 0 0 {name=l3 lab=VDD}
+C {vdd.sym} 210 -390 0 0 {name=l3 lab=VDD}
 C {vsource.sym} 120 -640 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
-C {vsource.sym} -60 -510 0 0 {name=Vmid value=1.65 savecurrent=false}
-C {gnd.sym} -60 -480 0 0 {name=Vmid1 lab=0
+C {vsource.sym} 120 -370 0 0 {name=Vmid value=1.65 savecurrent=false}
+C {gnd.sym} 120 -340 0 0 {name=Vmid1 lab=0
 value=1.65}
-C {vdd.sym} -60 -540 0 0 {name=l6 lab=Vmid}
+C {vdd.sym} 120 -400 0 0 {name=l6 lab=Vmid}
 C {lab_wire.sym} 120 -700 0 0 {name=p3 sig_type=std_logic lab=Vp}
 C {lab_wire.sym} 160 -590 0 0 {name=p4 sig_type=std_logic lab=Vn}
 C {vsource.sym} 120 -550 0 0 {name=Vcm value="0 ac=0" savecurrent=false}
-C {code.sym} -240 -580 0 0 {name=NGSPICE
+C {code.sym} 80 -230 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .option wnflag=1 
@@ -71,9 +71,9 @@ value="
 
 .save all
 .control
-if 0
+if 1
 op
-write instamp_tb.raw
+write tt_um_jonathanwest3_instamp_sp2026_tb.raw
 endif
 
 set appendwrite
@@ -223,7 +223,7 @@ endif
 .endc
 " }
 C {vdd.sym} 120 -520 2 0 {name=l4 lab=Vmid}
-C {gnd.sym} 50 -480 0 0 {name=Vmid2 lab=0
+C {gnd.sym} 210 -330 0 0 {name=Vmid2 lab=0
 value=1.65}
 C {gnd.sym} 880 -570 0 0 {name=l1 lab=0}
 C {capa.sym} 880 -630 0 0 {name=Cref
@@ -257,9 +257,9 @@ C {gnd.sym} 1000 -610 0 0 {name=l7 lab=0}
 C {tt_um_jonathanwest3_instamp_sp2026.sym} 580 -270 0 0 {name=x1}
 C {lab_wire.sym} 270 -550 0 0 {name=p1 sig_type=std_logic lab=Rgp}
 C {lab_wire.sym} 270 -490 3 0 {name=p2 sig_type=std_logic lab=Rgn}
-C {lab_pin.sym} 440 -610 0 0 {name=p7 sig_type=std_logic lab=Vp}
-C {lab_pin.sym} 440 -590 0 0 {name=p8 sig_type=std_logic lab=Rgp}
-C {lab_pin.sym} 440 -570 0 0 {name=p9 sig_type=std_logic lab=Rgn}
-C {lab_pin.sym} 440 -550 0 0 {name=p10 sig_type=std_logic lab=Vn}
-C {lab_pin.sym} 440 -530 0 0 {name=p11 sig_type=std_logic lab=Vout}
-C {lab_pin.sym} 440 -510 0 0 {name=p12 sig_type=std_logic lab=Vref}
+C {lab_pin.sym} 440 -570 0 0 {name=p7 sig_type=std_logic lab=Vp}
+C {lab_pin.sym} 440 -550 0 0 {name=p8 sig_type=std_logic lab=Rgp}
+C {lab_pin.sym} 440 -530 0 0 {name=p9 sig_type=std_logic lab=Rgn}
+C {lab_pin.sym} 440 -510 0 0 {name=p10 sig_type=std_logic lab=Vn}
+C {lab_pin.sym} 440 -610 0 0 {name=p11 sig_type=std_logic lab=Vout}
+C {lab_pin.sym} 440 -590 0 0 {name=p12 sig_type=std_logic lab=Vref}

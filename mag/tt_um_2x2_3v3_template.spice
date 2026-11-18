@@ -1,0 +1,56 @@
+* NGSPICE file created from tt_um_2x2_3v3_template.ext - technology: sky130A
+
+.subckt tt_um_2x2_3v3_template clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6]
++ ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0]
++ uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0]
++ uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0]
++ uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[0]
++ uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7] VDPWR VGND
++ VAPWR
+R0 uio_out[1] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R1 ui_in[2] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R2 uo_out[7] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R3 ui_in[1] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R4 uo_out[0] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R5 uio_in[3] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R6 VGND ua[6] sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R7 VGND ua[7] sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R8 uio_oe[4] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R9 uio_in[2] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R10 ui_in[7] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R11 uo_out[1] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R12 uio_oe[2] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R13 uo_out[3] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R14 ui_in[5] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R15 uio_out[5] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R16 uio_in[7] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R17 rst_n VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R18 ena VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R19 uio_in[5] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R20 uio_in[0] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R21 uio_oe[3] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R22 uio_out[4] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R23 uo_out[6] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R24 uo_out[4] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R25 uio_oe[6] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R26 uo_out[5] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R27 uio_in[6] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R28 ui_in[4] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R29 uio_out[2] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R30 uio_out[3] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R31 uio_out[6] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R32 uio_oe[5] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R33 uio_oe[1] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R34 uio_out[7] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R35 ui_in[6] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R36 ui_in[3] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R37 uio_oe[0] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R38 uio_in[4] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R39 uio_in[1] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R40 clk VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R41 ui_in[0] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R42 uio_oe[7] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R43 uio_out[0] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R44 uo_out[2] VGND sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+.ends
+
