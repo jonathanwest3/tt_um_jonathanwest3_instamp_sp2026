@@ -25,14 +25,16 @@ in  the tiny tapeout shuttle
 The pin names must match the tt definitions} -140 -570 0 0 0.4 0.4 {}
 T {Apparently we cannot delete unused pins from the layout so they need to exist
 in the symbol for the subcircuit to match.
-The documentation says unused outputs should be grounded.} -140 -160 0 0 0.4 0.4 {}
+The documentation says unused outputs should be grounded.
+Not clear about unused inputs but they have to go somewhere
+or the LVS will complain} -150 -180 0 0 0.4 0.4 {}
 T {Can't use ua6 or 7} -380 -320 0 0 0.4 0.4 {}
 T {Datasheet says to GND unused outputs
-but if you tie them directly, the netlist fails} 450 240 0 0 0.4 0.4 {}
-T {Everything but the outputs are io pins
-so netlist won't complain about undriven nets} -80 260 0 0 0.4 0.4 {}
+but if you tie them directly, the netlist fails
+so use small resistors} 690 280 0 0 0.4 0.4 {}
 T {Tinytapeout only has 6 analog pins but we need 7 
 So we have to generate our own Vmid} 530 -400 0 0 0.4 0.4 {}
+T {Don't know what to do with VDPWR to keep LVS happy....} -560 280 0 0 0.4 0.4 {}
 N -60 -340 -60 -320 {lab=Vmid}
 N -60 -330 170 -330 {lab=Vmid}
 N 710 20 710 210 {lab=VGND}
@@ -41,17 +43,18 @@ N -220 20 -220 210 {lab=VGND}
 N 150 20 150 210 {lab=VGND}
 N -360 -260 -360 -70 {lab=VGND}
 N 1040 20 1040 210 {lab=VGND}
-C {ipin.sym} 170 -290 0 0 {name=p17 lab=VGND}
-C {ipin.sym} 170 -310 0 0 {name=p18 lab=VAPWR}
+N -490 -100 -490 90 {lab=VGND}
+C {ipin.sym} -350 210 0 0 {name=p17 lab=VGND}
+C {ipin.sym} -350 230 0 0 {name=p18 lab=VAPWR}
 C {instamp.sym} 320 -390 0 0 {name=x5}
 C {sky130_fd_pr/res_high_po_0p35.sym} -60 -370 0 0 {name=R1
-L=4
+L=20
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
 C {lab_pin.sym} -80 -370 0 0 {name=p5 sig_type=std_logic lab=VGND}
 C {sky130_fd_pr/res_high_po_0p35.sym} -60 -290 0 0 {name=R2
-L=4
+L=20
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
@@ -74,22 +77,22 @@ C {opin.sym} 770 100 0 0 {name=p33 lab=uio_out[4]}
 C {opin.sym} 770 120 0 0 {name=p34 lab=uio_out[5]}
 C {opin.sym} 770 140 0 0 {name=p35 lab=uio_out[6]}
 C {opin.sym} 770 160 0 0 {name=p36 lab=uio_out[7]}
-C {iopin.sym} -160 20 0 0 {name=p37 lab=ui_in[7]}
+C {iopin.sym} -160 160 0 0 {name=p37 lab=ui_in[7]}
 C {lab_pin.sym} 370 200 0 0 {name=p12 sig_type=std_logic lab=VGND}
 C {lab_pin.sym} 710 200 0 0 {name=p13 sig_type=std_logic lab=VGND}
-C {iopin.sym} -430 20 0 0 {name=p19 lab=clk}
-C {iopin.sym} -430 40 0 0 {name=p20 lab=ena}
-C {iopin.sym} -430 60 0 0 {name=p45 lab=rst_n}
-C {iopin.sym} -430 80 0 0 {name=p11 lab=VDPWR}
+C {iopin.sym} -430 0 0 0 {name=p19 lab=clk}
+C {iopin.sym} -430 20 0 0 {name=p20 lab=ena}
+C {iopin.sym} -430 40 0 0 {name=p45 lab=rst_n}
+C {iopin.sym} -430 190 0 0 {name=p11 lab=VDPWR}
 C {iopin.sym} 1100 20 0 0 {name=p14 lab=uio_oe[0]}
 C {iopin.sym} 210 20 0 0 {name=p15 lab=uio_in[0]}
-C {iopin.sym} -160 40 0 0 {name=p16 lab=ui_in[6]}
-C {iopin.sym} -160 60 0 0 {name=p38 lab=ui_in[5]}
-C {iopin.sym} -160 80 0 0 {name=p40 lab=ui_in[4]}
-C {iopin.sym} -160 100 0 0 {name=p41 lab=ui_in[3]}
-C {iopin.sym} -160 120 0 0 {name=p42 lab=ui_in[2]}
-C {iopin.sym} -160 140 0 0 {name=p43 lab=ui_in[1]}
-C {iopin.sym} -160 160 0 0 {name=p44 lab=ui_in[0]}
+C {iopin.sym} -160 140 0 0 {name=p16 lab=ui_in[6]}
+C {iopin.sym} -160 120 0 0 {name=p38 lab=ui_in[5]}
+C {iopin.sym} -160 100 0 0 {name=p40 lab=ui_in[4]}
+C {iopin.sym} -160 80 0 0 {name=p41 lab=ui_in[3]}
+C {iopin.sym} -160 60 0 0 {name=p42 lab=ui_in[2]}
+C {iopin.sym} -160 40 0 0 {name=p43 lab=ui_in[1]}
+C {iopin.sym} -160 20 0 0 {name=p44 lab=ui_in[0]}
 C {iopin.sym} -300 -260 0 0 {name=p46 lab=ua[0]}
 C {iopin.sym} -300 -240 0 0 {name=p47 lab=ua[1]}
 C {iopin.sym} -300 -220 0 0 {name=p48 lab=ua[2]}
@@ -333,3 +336,21 @@ L=1
 model=res_generic_m3
 mult=1}
 C {lab_wire.sym} 80 -330 0 0 {name=p71 sig_type=std_logic lab=Vmid}
+C {lab_pin.sym} 170 -310 0 0 {name=p72 sig_type=std_logic lab=VAPWR}
+C {lab_pin.sym} 170 -290 0 0 {name=p73 sig_type=std_logic lab=VGND}
+C {lab_pin.sym} -490 80 0 0 {name=p74 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/res_generic_m3.sym} -460 20 1 0 {name=R45
+W=1
+L=1
+model=res_generic_m3
+mult=1}
+C {sky130_fd_pr/res_generic_m3.sym} -460 40 1 0 {name=R46
+W=1
+L=1
+model=res_generic_m3
+mult=1}
+C {sky130_fd_pr/res_generic_m3.sym} -460 0 1 0 {name=R47
+W=1
+L=1
+model=res_generic_m3
+mult=1}

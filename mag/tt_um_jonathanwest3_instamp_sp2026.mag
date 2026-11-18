@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1794969590
+timestamp 1795017314
 << ndiff >>
 rect 15361 -81 15779 337
 << metal2 >>
@@ -787,7 +787,7 @@ port 1 nsew signal input
 flabel metal4 s 25086 44952 25146 45152 0 FreeSans 480 90 0 0 rst_n
 port 2 nsew signal input
 flabel metal4 s 27234 0 27414 200 0 FreeSans 960 0 0 0 ua[0]
-port 3 nsew signal bidirectional
+port 5 nsew signal bidirectional
 flabel metal4 s 23370 0 23550 200 0 FreeSans 960 0 0 0 ua[1]
 port 4 nsew signal bidirectional
 flabel metal4 s 19506 0 19686 200 0 FreeSans 960 0 0 0 ua[2]
@@ -840,14 +840,6 @@ flabel metal4 s 6318 44952 6378 45152 0 FreeSans 480 90 0 0 uio_oe[1]
 port 28 nsew signal output
 flabel metal4 s 5766 44952 5826 45152 0 FreeSans 480 90 0 0 uio_oe[2]
 port 29 nsew signal output
-flabel metal4 s 5214 44952 5274 45152 0 FreeSans 480 90 0 0 uio_oe[3]
-port 30 nsew signal output
-flabel metal4 s 4662 44952 4722 45152 0 FreeSans 480 90 0 0 uio_oe[4]
-port 31 nsew signal output
-flabel metal4 s 4110 44952 4170 45152 0 FreeSans 480 90 0 0 uio_oe[5]
-port 32 nsew signal output
-flabel metal4 s 3558 44952 3618 45152 0 FreeSans 480 90 0 0 uio_oe[6]
-port 33 nsew signal output
 flabel metal4 s 3006 44952 3066 45152 0 FreeSans 480 90 0 0 uio_oe[7]
 port 34 nsew signal output
 flabel metal4 s 11286 44952 11346 45152 0 FreeSans 480 90 0 0 uio_out[0]
@@ -900,6 +892,14 @@ rlabel metal3 15176 44883 15176 44883 0 R1
 port 1 nsew
 rlabel metal3 15726 44879 15726 44879 0 R1
 port 1 nsew
+flabel metal4 s 3558 44952 3618 45152 0 FreeSans 480 90 0 0 uio_oe[6]
+port 33 nsew signal output
+flabel metal4 s 4110 44952 4170 45152 0 FreeSans 480 90 0 0 uio_oe[5]
+port 32 nsew signal output
+flabel metal4 s 4662 44952 4722 45152 0 FreeSans 480 90 0 0 uio_oe[4]
+port 31 nsew signal output
+flabel metal4 s 5214 44952 5274 45152 0 FreeSans 480 90 0 0 uio_oe[3]
+port 30 nsew signal output
 << properties >>
 string FIXED_BBOX 0 0 63848 45152
 << end >>

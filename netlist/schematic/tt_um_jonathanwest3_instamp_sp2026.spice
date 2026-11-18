@@ -1,4 +1,4 @@
-** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sch
+** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sch
 .subckt tt_um_jonathanwest3_instamp_sp2026 clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6] ua[7] ui_in[0] ui_in[1]
 + ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7]
 + uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4]
@@ -9,8 +9,8 @@
 *+ ua[5]:B ua[6]:B ua[7]:B uio_oe[1]:B uio_oe[2]:B uio_oe[3]:B uio_oe[4]:B uio_oe[5]:B uio_oe[6]:B uio_oe[7]:B uio_in[1]:B uio_in[2]:B
 *+ uio_in[3]:B uio_in[4]:B uio_in[5]:B uio_in[6]:B uio_in[7]:B
 x5 ua[5] ua[4] ua[2] ua[3] Vmid ua[0] ua[1] VAPWR VGND instamp
-XR1 Vmid VAPWR VGND sky130_fd_pr__res_high_po_0p35 L=4 mult=1
-XR2 VGND Vmid VGND sky130_fd_pr__res_high_po_0p35 L=4 mult=1
+XR1 Vmid VAPWR VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1
+XR2 VGND Vmid VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1
 R3 VGND uo_out[0] sky130_fd_pr__res_generic_m3 W=1 L=1
 R4 VGND uo_out[1] sky130_fd_pr__res_generic_m3 W=1 L=1
 R5 VGND uo_out[2] sky130_fd_pr__res_generic_m3 W=1 L=1
@@ -27,14 +27,14 @@ R15 VGND uio_out[4] sky130_fd_pr__res_generic_m3 W=1 L=1
 R16 VGND uio_out[5] sky130_fd_pr__res_generic_m3 W=1 L=1
 R17 VGND uio_out[6] sky130_fd_pr__res_generic_m3 W=1 L=1
 R18 VGND uio_out[7] sky130_fd_pr__res_generic_m3 W=1 L=1
-R19 VGND ui_in[7] sky130_fd_pr__res_generic_m3 W=1 L=1
-R20 VGND ui_in[6] sky130_fd_pr__res_generic_m3 W=1 L=1
-R21 VGND ui_in[5] sky130_fd_pr__res_generic_m3 W=1 L=1
-R22 VGND ui_in[4] sky130_fd_pr__res_generic_m3 W=1 L=1
-R23 VGND ui_in[3] sky130_fd_pr__res_generic_m3 W=1 L=1
-R24 VGND ui_in[2] sky130_fd_pr__res_generic_m3 W=1 L=1
-R25 VGND ui_in[1] sky130_fd_pr__res_generic_m3 W=1 L=1
-R26 VGND ui_in[0] sky130_fd_pr__res_generic_m3 W=1 L=1
+R19 VGND ui_in[0] sky130_fd_pr__res_generic_m3 W=1 L=1
+R20 VGND ui_in[1] sky130_fd_pr__res_generic_m3 W=1 L=1
+R21 VGND ui_in[2] sky130_fd_pr__res_generic_m3 W=1 L=1
+R22 VGND ui_in[3] sky130_fd_pr__res_generic_m3 W=1 L=1
+R23 VGND ui_in[4] sky130_fd_pr__res_generic_m3 W=1 L=1
+R24 VGND ui_in[5] sky130_fd_pr__res_generic_m3 W=1 L=1
+R25 VGND ui_in[6] sky130_fd_pr__res_generic_m3 W=1 L=1
+R26 VGND ui_in[7] sky130_fd_pr__res_generic_m3 W=1 L=1
 R27 VGND uio_in[0] sky130_fd_pr__res_generic_m3 W=1 L=1
 R28 VGND uio_in[1] sky130_fd_pr__res_generic_m3 W=1 L=1
 R29 VGND uio_in[2] sky130_fd_pr__res_generic_m3 W=1 L=1
@@ -53,11 +53,14 @@ R39 VGND uio_oe[4] sky130_fd_pr__res_generic_m3 W=1 L=1
 R40 VGND uio_oe[5] sky130_fd_pr__res_generic_m3 W=1 L=1
 R43 VGND uio_oe[6] sky130_fd_pr__res_generic_m3 W=1 L=1
 R44 VGND uio_oe[7] sky130_fd_pr__res_generic_m3 W=1 L=1
+R45 VGND ena sky130_fd_pr__res_generic_m3 W=1 L=1
+R46 VGND rst_n sky130_fd_pr__res_generic_m3 W=1 L=1
+R47 VGND clk sky130_fd_pr__res_generic_m3 W=1 L=1
 .ends
 
 * expanding   symbol:  instamp.sym # of pins=9
-** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sym
-** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sch
+** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sym
+** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sch
 .subckt instamp Vn Rgn Vp Rgp Vmid Vout Vref VDD GND
 *.PININFO Vp:I Vn:I Vout:O Vref:O Rgp:I Rgn:I Vmid:I GND:I VDD:I
 XR1 Rgp Vout3 GND sky130_fd_pr__res_high_po_0p35 L=76.36 mult=1
@@ -75,8 +78,8 @@ x1 Vref GND VDD bandgap
 
 
 * expanding   symbol:  opamp.sym # of pins=6
-** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sym
-** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
+** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sym
+** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
 .subckt opamp Vref Vout Vp Vn VDD GND
 *.PININFO Vout:O Vref:I Vp:I Vn:I GND:I VDD:I
 XM1 Vg1 Vg1 net1 GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=3.33 nf=1 ad=0.9657 as=0.9657 pd=7.24 ps=7.24 nrd=0.0870870870870871
@@ -157,8 +160,8 @@ XC2 Vg28 Vout sky130_fd_pr__cap_mim_m3_1 W=30 L=20 MF=4 m=4
 
 
 * expanding   symbol:  bandgap.sym # of pins=3
-** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
-** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
+** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
+** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
 .subckt bandgap Vref GND VDD
 *.PININFO Vref:O GND:I VDD:I
 XM4 Vg3 Vg3 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=1 ad=5.8 as=5.8 pd=40.58 ps=40.58 nrd=0.0145 nrs=0.0145 sa=0 sb=0
