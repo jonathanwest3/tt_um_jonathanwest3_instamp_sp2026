@@ -171,7 +171,7 @@ parameters:
         suffix: .data
         variables: [gain, bw]
     plot:
-      gain_vs_temperature:
+      gain_vs_temperature_20dB:
         type: xyplot
         xaxis: temperature
         yaxis: gain

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1794708982
+timestamp 1795020555
 << mvpsubdiff >>
 rect -3223 29385 -3163 29419
 rect -2171 29385 -2111 29419
@@ -494,7 +494,7 @@ rect -3398 1754 -3374 2844
 rect -1782 1754 -1758 2844
 rect -3398 1730 -1758 1754
 use bandgap  bandgap_0
-timestamp 1794585609
+timestamp 1795020555
 transform 0 1 27786 -1 0 37734
 box -5632 -3362 11226 3130
 use opamp  opamp_0

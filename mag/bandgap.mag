@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1794585609
+timestamp 1795020555
 << locali >>
 rect -5594 3118 -2340 3128
 rect 2560 3118 4506 3122
@@ -237,7 +237,7 @@ rect 4247 -88 4473 -82
 rect 4473 -314 8059 -88
 rect 4247 -320 4473 -314
 use bandgap_bjts  bandgap_bjts_0
-timestamp 1794585609
+timestamp 1795020555
 transform 1 0 4726 0 1 -3358
 box 8 -4 6500 6488
 use bandgap_m1  bandgap_m1_0

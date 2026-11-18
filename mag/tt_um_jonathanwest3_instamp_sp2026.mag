@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1795017314
+timestamp 1795020555
 << ndiff >>
 rect 15361 -81 15779 337
 << metal2 >>
@@ -604,7 +604,7 @@ rect 27207 27 27414 187
 rect 27044 26 27414 27
 rect 27234 0 27414 26
 use instamp  instamp_0
-timestamp 1794708982
+timestamp 1795020555
 transform 1 0 32286 0 1 84
 box -31800 0 32000 45000
 use sky130_fd_pr__res_generic_m3_5VRV4L  sky130_fd_pr__res_generic_m3_5VRV4L_0
@@ -787,7 +787,7 @@ port 1 nsew signal input
 flabel metal4 s 25086 44952 25146 45152 0 FreeSans 480 90 0 0 rst_n
 port 2 nsew signal input
 flabel metal4 s 27234 0 27414 200 0 FreeSans 960 0 0 0 ua[0]
-port 5 nsew signal bidirectional
+port 3 nsew signal bidirectional
 flabel metal4 s 23370 0 23550 200 0 FreeSans 960 0 0 0 ua[1]
 port 4 nsew signal bidirectional
 flabel metal4 s 19506 0 19686 200 0 FreeSans 960 0 0 0 ua[2]
