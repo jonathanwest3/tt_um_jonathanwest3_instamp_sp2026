@@ -1,5 +1,9 @@
 * NGSPICE file created from tt_um_jonathanwest3_instamp_sp2026.ext - technology: sky130A
 
+.subckt sky130_fd_pr__res_generic_m3_5VRV4L R1 R2
+R0 R1 R2 sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+.ends
+
 .subckt sky130_fd_pr__res_high_po_0p35_5E7VKC B R1 R2
 X0 R2 R1 B sky130_fd_pr__res_high_po_0p35 l=76.36
 .ends
@@ -319,7 +323,7 @@ Xsky130_fd_pr__pfet_g5v0d10v5_DB8A6Y_0 G S m1_4014_7500# S m1_4014_7500# G S G s
 Xsky130_fd_pr__pfet_g5v0d10v5_PUA7NM_0 G m1_4014_7500# m1_4014_7500# G D S D G sky130_fd_pr__pfet_g5v0d10v5_PUA7NM
 .ends
 
-.subckt opamp Vref Vout Vp Vn VDD Vg1 GND
+.subckt opamp Vref Vp Vn VDD Vg1 Vout GND
 Xm13_14 Vg11 Vg27 VDD Vd29 m11_12
 XM20 GND Vg22 GND Vg1 sky130_fd_pr__nfet_g5v0d10v5_VXNDUF
 XM24 VDD VDD Vd24 Vg5 sky130_fd_pr__pfet_g5v0d10v5_4KCRW8
@@ -518,28 +522,70 @@ Xsky130_fd_pr__res_high_po_0p35_Q87NDB_0 GND Vg1 Vref sky130_fd_pr__res_high_po_
 Xsky130_fd_pr__res_high_po_0p35_Q87NDB_1 GND Vg2 Vref sky130_fd_pr__res_high_po_0p35_Q87NDB
 .ends
 
-.subckt instamp Vn Rgn Vp Rgp Vmid Vout Vref VDD GND
+.subckt instamp Vn Rgn Vp Rgp Vmid Vout Vref VDD GND Vout2 Vout3
 XR1 GND Rgp Vout3 sky130_fd_pr__res_high_po_0p35_5E7VKC
 XR2 GND Rgn Vout2 sky130_fd_pr__res_high_po_0p35_5E7VKC
 XR3 GND Vout2 Vn4 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR4 GND Vout3 Vp4 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR5 GND Vp4 Vout5 sky130_fd_pr__res_high_po_0p35_T9W6LG
 XR6 GND Vn4 Vout sky130_fd_pr__res_high_po_0p35_T9W6LG
-Xopamp_0 Vref Vout Vp4 Vn4 VDD opamp_0/Vg1 GND opamp
-Xopamp_1 Vref Vout2 Vn Rgn VDD opamp_1/Vg1 GND opamp
-Xopamp_2 Vref Vout3 Vp Rgp VDD opamp_2/Vg1 GND opamp
+Xopamp_0 Vref Vp4 Vn4 VDD opamp_0/Vg1 Vout GND opamp
+Xopamp_1 Vref Vn Rgn VDD opamp_1/Vg1 Vout2 GND opamp
+Xopamp_2 Vref Vp Rgp VDD opamp_2/Vg1 Vout3 GND opamp
 Xbandgap_0 Vref VDD GND bandgap
-Xopamp_3 Vref Vout5 Vmid Vout5 VDD opamp_3/Vg1 GND opamp
+Xopamp_3 Vref Vmid Vout5 VDD opamp_3/Vg1 Vout5 GND opamp
 .ends
 
-.subckt tt_um_jonathanwest3_instamp_sp2026 clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4]
-+ ua[5] ua[6] ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6]
-+ ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7]
-+ uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7]
-+ uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7]
-+ uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7]
-+ VDPWR VGND VAPWR
-Xinstamp_0 instamp_0/Vn instamp_0/Rgn instamp_0/Vp instamp_0/Rgp instamp_0/Vmid instamp_0/Vout
-+ instamp_0/Vref VAPWR VSUBS instamp
+.subckt tt_um_jonathanwest3_instamp_sp2026 clk R1 rst_n ua[1] ua[3] ua[4] ua[5] ua[6]
++ ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0]
++ uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0]
++ uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0]
++ uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[6]
++ uo_out[7] VDPWR VGND VAPWR R1_uq0 R1_uq1 R1_uq2 R1_uq3 R1_uq4
+Xsky130_fd_pr__res_generic_m3_5VRV4L_39 ui_in[0] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_28 uio_in[3] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_17 uio_oe[1] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_29 uio_in[2] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_18 uio_oe[2] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_19 uio_oe[3] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_1 uio_out[5] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_0 uio_out[4] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_2 uio_out[6] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_3 uio_out[7] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_4 uio_out[3] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_5 uio_out[2] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_6 uio_out[1] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_7 uio_out[0] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_9 uo_out[6] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_8 uo_out[7] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_40 rst_n VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_41 clk VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_30 uio_in[1] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_42 ena VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_31 uio_in[0] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_20 uio_oe[4] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_32 ui_in[7] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_10 R1_uq3 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_21 uio_oe[5] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xinstamp_0 ua[5] ua[4] ua[3] ua[3] instamp_0/Vmid instamp_0/Vout ua[3] VAPWR VGND
++ ua[3] ua[3] instamp
+Xsky130_fd_pr__res_generic_m3_5VRV4L_34 ui_in[5] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_33 ui_in[6] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_12 R1_uq2 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_11 R1_uq4 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_22 uio_oe[6] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_23 uio_oe[7] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_35 ui_in[4] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_24 uio_in[7] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_13 R1_uq1 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_36 ui_in[3] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_25 uio_in[6] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_14 R1 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_37 ui_in[2] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_26 uio_in[5] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_15 R1_uq0 VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_38 ui_in[1] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_27 uio_in[4] VGND sky130_fd_pr__res_generic_m3_5VRV4L
+Xsky130_fd_pr__res_generic_m3_5VRV4L_16 uio_oe[0] VGND sky130_fd_pr__res_generic_m3_5VRV4L
 .ends
 

@@ -2,8 +2,8 @@
 # CACE circuit characterization file
 #--------------------------------------------------------------
 
-name: instamp
-description: Instrumentaion amplifier
+name: tt_um_jonathanwest3_instamp_sp2026
+description: Instrumentaion amplifier in tiny tapeout shuttle
 PDK: sky130A
 cace_format: 5.2
 
@@ -131,8 +131,7 @@ parameters:
         maximum:
           value: 0
     tool:
-      netgen_lvs:
-        script: run_project_lvs.tcl
+      netgen_lvs
 
   magic_drc:
     description: Magic DRC
@@ -143,5 +142,4 @@ parameters:
           value: 0
     tool:
       magic_drc
-
 
