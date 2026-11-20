@@ -59,7 +59,7 @@ C {code.sym} 20 -350 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .option wnflag=1 
-*.include ../gds/bandgap.spice
+.include ../netlist/rcx/bandgap.spice
 .save all
 .control
 set gnuplot_terminal=png/quit

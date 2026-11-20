@@ -257,9 +257,9 @@ C {gnd.sym} 1000 -610 0 0 {name=l7 lab=0}
 C {tt_um_jonathanwest3_instamp_sp2026.sym} 580 -270 0 0 {name=x1}
 C {lab_wire.sym} 270 -550 0 0 {name=p1 sig_type=std_logic lab=Rgp}
 C {lab_wire.sym} 270 -490 3 0 {name=p2 sig_type=std_logic lab=Rgn}
-C {lab_pin.sym} 440 -570 0 0 {name=p7 sig_type=std_logic lab=Vp}
+C {lab_pin.sym} 440 -590 0 0 {name=p7 sig_type=std_logic lab=Vp}
 C {lab_pin.sym} 440 -550 0 0 {name=p8 sig_type=std_logic lab=Rgp}
 C {lab_pin.sym} 440 -530 0 0 {name=p9 sig_type=std_logic lab=Rgn}
 C {lab_pin.sym} 440 -510 0 0 {name=p10 sig_type=std_logic lab=Vn}
 C {lab_pin.sym} 440 -610 0 0 {name=p11 sig_type=std_logic lab=Vout}
-C {lab_pin.sym} 440 -590 0 0 {name=p12 sig_type=std_logic lab=Vref}
+C {lab_pin.sym} 440 -570 0 0 {name=p12 sig_type=std_logic lab=Vref}

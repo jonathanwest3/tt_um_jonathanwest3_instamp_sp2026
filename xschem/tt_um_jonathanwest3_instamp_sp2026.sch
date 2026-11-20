@@ -103,8 +103,8 @@ C {iopin.sym} -300 -140 0 0 {name=p52 lab=ua[6]}
 C {iopin.sym} -300 -120 0 0 {name=p1 lab=ua[7]}
 C {lab_pin.sym} 470 -430 0 1 {name=p2 sig_type=std_logic lab=ua[0]}
 C {lab_pin.sym} 470 -330 0 1 {name=p3 sig_type=std_logic lab=ua[1]}
-C {lab_pin.sym} 170 -430 0 0 {name=p9 sig_type=std_logic lab=ua[2]}
-C {lab_pin.sym} 170 -410 0 0 {name=p10 sig_type=std_logic lab=ua[3]}
+C {lab_pin.sym} 170 -410 0 0 {name=p9 sig_type=std_logic lab=ua[2]}
+C {lab_pin.sym} 170 -430 0 0 {name=p10 sig_type=std_logic lab=ua[3]}
 C {lab_pin.sym} 170 -370 0 0 {name=p53 sig_type=std_logic lab=ua[4]}
 C {lab_pin.sym} 170 -350 0 0 {name=p4 sig_type=std_logic lab=ua[5]}
 C {iopin.sym} 1100 40 0 0 {name=p54 lab=uio_oe[1]}

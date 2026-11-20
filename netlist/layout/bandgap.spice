@@ -137,8 +137,10 @@ X3 a_n108_n400# a_n366_n497# a_n266_n400# B sky130_fd_pr__pfet_g5v0d10v5 ad=0.58
 X4 a_208_n400# a_n366_n497# a_50_n400# B sky130_fd_pr__pfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
 .ends
 
-.subckt bandgap_m12 D G S B
-Xsky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1 B D G S S D S D sky130_fd_pr__pfet_g5v0d10v5_DQLY7V
+.subckt bandgap_m12 sky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1/B li_126_350# m1_38_120#
+Xsky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1 sky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1/B sky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1/B
++ li_126_350# m1_38_120# m1_38_120# sky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1/B m1_38_120#
++ sky130_fd_pr__pfet_g5v0d10v5_DQLY7V_1/B sky130_fd_pr__pfet_g5v0d10v5_DQLY7V
 .ends
 
 .subckt sky130_fd_pr__res_high_po_0p35_PF4TA6 B R1 R2
@@ -150,22 +152,22 @@ X0 R2 R1 B sky130_fd_pr__res_high_po_0p35 l=20.1
 .ends
 
 .subckt bandgap Vref VDD GND
-Xbandgap_m7_0 Vg12 GND Vg12 GND bandgap_m7
+Xbandgap_m7_0 bandgap_m7_0/G GND bandgap_m7_0/G GND bandgap_m7
 Xbandgap_bjts_0 Ve1 Vg2 GND bandgap_bjts
 Xbandgap_m3_0 Vg3 GND Vg3 GND bandgap_m3
 Xbandgap_m3_1 Vg10 GND Vg3 GND bandgap_m3
 Xbandgap_m3_2 bandgap_m3_3/D GND Vg10 GND bandgap_m3
 Xbandgap_m1_0 Vg3 Vg2 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S
 + bandgap_m1
-Xbandgap_m3_3 Vg12 bandgap_m3_3/D Vref GND bandgap_m3
+Xbandgap_m3_3 bandgap_m7_0/G bandgap_m3_3/D Vref GND bandgap_m3
 Xsky130_fd_pr__nfet_g5v0d10v5_98BQ98_0 GND Vg5 Vs5 Vref sky130_fd_pr__nfet_g5v0d10v5_98BQ98
 Xbandgap_m1_1 Vg10 Vg1 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S
 + bandgap_m1
 Xsky130_fd_pr__res_high_po_0p69_TK733K_0 GND Ve1 Vg1 sky130_fd_pr__res_high_po_0p69_TK733K
 Xsky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0 VDD VDD sky130_fd_pr__pfet_g5v0d10v5_CEYAGG_0/S
 + Vg5 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG
-Xsky130_fd_pr__pfet_g5v0d10v5_CEYAGG_1 VDD VDD Vg12 Vg5 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG
-Xbandgap_m12_0 VDD Vg12 Vref VDD bandgap_m12
+Xsky130_fd_pr__pfet_g5v0d10v5_CEYAGG_1 VDD VDD bandgap_m7_0/G Vg5 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG
+Xbandgap_m12_0 VDD bandgap_m7_0/G Vref bandgap_m12
 Xsky130_fd_pr__pfet_g5v0d10v5_CEYAGG_2 VDD VDD Vg5 Vg5 sky130_fd_pr__pfet_g5v0d10v5_CEYAGG
 Xsky130_fd_pr__res_high_po_0p35_PF4TA6_0 GND Vs5 GND sky130_fd_pr__res_high_po_0p35_PF4TA6
 Xsky130_fd_pr__res_high_po_0p35_Q87NDB_0 GND Vg1 Vref sky130_fd_pr__res_high_po_0p35_Q87NDB

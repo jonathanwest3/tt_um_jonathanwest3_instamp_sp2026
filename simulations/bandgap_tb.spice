@@ -2,7 +2,7 @@
 **.subckt bandgap_tb
 Vdd VDD 0 3.3
 C1 Vref 0 100n
-x1 Vref 0 VDD bandgap
+x1 Vref VDD 0 bandgap
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
@@ -11,7 +11,7 @@ x1 Vref 0 VDD bandgap
 
 
 .option wnflag=1
-*.include ../gds/bandgap.spice
+.include ../netlist/rcx/bandgap.spice
 .save all
 .control
 set gnuplot_terminal=png/quit
@@ -35,7 +35,7 @@ gnuplot bandgap_vref_vs_vdd_vs_temp V(Vref)
 
 #dc TEMP -40 40 10
 #plot V(Vref) title 'Vref vs Temp at VDD=3.3'
-quit
+
 .endc
 
 
@@ -45,7 +45,7 @@ quit
 * expanding   symbol:  bandgap.sym # of pins=3
 ** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
 ** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
-.subckt bandgap Vref GND VDD
+.subckt bandgap Vref VDD GND
 *.opin Vref
 *.ipin GND
 *.ipin VDD
