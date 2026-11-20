@@ -1,4 +1,4 @@
-** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_ jonathanwest3_instamp_sp2026_tb.sch
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_ jonathanwest3_instamp_sp2026_tb.sch
 **.subckt tt_um_ jonathanwest3_instamp_sp2026_tb
 Vdd VDD 0 3.3
 Vdiff Vp Vn sin(0 5m 1k) AC=1
@@ -8,13 +8,13 @@ Cref Vref 0 100n
 Rg Rgn Rgp 17k
 Rload Vout 0 1Meg
 Cload Vout 0 10p
-x1 net1 net2 net3 Vout Vref Vp Rgp Rgn Vn net4 net5 net6 net7 net8 net9 net10 net11 net12 net13 net14 net15 net16 net17 net18
+x1 net1 net2 net3 Vout Vref Rgp Vp Rgn Vn net4 net5 net6 net7 net8 net9 net10 net11 net12 net13 net14 net15 net16 net17 net18
 + net19 net20 net21 net22 net23 net24 net25 net26 net27 net28 net29 net30 net31 net32 net33 net34 net35 net36 net37 net38 net39 net40
 + net41 net42 net43 net44 net45 net46 0 VDD tt_um_jonathanwest3_instamp_sp2026
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
-.lib /home/jwest/.ciel/sky130A/libs.tech/combined/sky130.lib.spice tt
+.lib /home/jmwest/.ciel/sky130A/libs.tech/combined/sky130.lib.spice tt
 
 
 
@@ -25,7 +25,7 @@ x1 net1 net2 net3 Vout Vref Vp Rgp Rgn Vn net4 net5 net6 net7 net8 net9 net10 ne
 # if one of these is uncommented, it will
 # override the subcircuit in the symbol
 # from the cace extracction
-#.include ../netlist/rcx/instamp.spice
+.include ../netlist/rcx/tt_um_jonathanwest3_instamp_sp2026.spice
 # from the mag extraction
 #.include ../netlist/layout/instamp.spice
 
@@ -187,8 +187,8 @@ endif
 **.ends
 
 * expanding   symbol:  tt_um_jonathanwest3_instamp_sp2026.sym # of pins=54
-** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sym
-** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sch
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/tt_um_jonathanwest3_instamp_sp2026.sch
 .subckt tt_um_jonathanwest3_instamp_sp2026 clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6] ua[7] ui_in[0] ui_in[1]
 + ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7]
 + uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4]
@@ -247,7 +247,7 @@ endif
 *.iopin uio_in[5]
 *.iopin uio_in[6]
 *.iopin uio_in[7]
-x5 ua[5] ua[4] ua[2] ua[3] Vmid ua[0] ua[1] VAPWR VGND instamp
+x5 ua[5] ua[4] ua[3] ua[2] Vmid ua[0] ua[1] VAPWR VGND instamp
 XR1 Vmid VAPWR VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1
 XR2 VGND Vmid VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1
 R3 VGND uo_out[0] sky130_fd_pr__res_generic_m3 W=1 L=1
@@ -299,8 +299,8 @@ R47 VGND clk sky130_fd_pr__res_generic_m3 W=1 L=1
 
 
 * expanding   symbol:  instamp.sym # of pins=9
-** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sym
-** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sch
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sch
 .subckt instamp Vn Rgn Vp Rgp Vmid Vout Vref VDD GND
 *.ipin Vp
 *.ipin Vn
@@ -321,13 +321,13 @@ x6 Vref Vout3 Vp Rgp VDD GND opamp
 x2 Vref Vout2 Vn Rgn VDD GND opamp
 x3 Vref Vout Vp4 Vn4 VDD GND opamp
 x4 Vref Vout5 Vmid Vout5 VDD GND opamp
-x1 Vref GND VDD bandgap
+x1 Vref VDD GND bandgap
 .ends
 
 
 * expanding   symbol:  opamp.sym # of pins=6
-** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sym
-** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
 .subckt opamp Vref Vout Vp Vn VDD GND
 *.opin Vout
 *.ipin Vref
@@ -413,9 +413,9 @@ XC2 Vg28 Vout sky130_fd_pr__cap_mim_m3_1 W=30 L=20 MF=4 m=4
 
 
 * expanding   symbol:  bandgap.sym # of pins=3
-** sym_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
-** sch_path: /home/jwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
-.subckt bandgap Vref GND VDD
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
+.subckt bandgap Vref VDD GND
 *.opin Vref
 *.ipin GND
 *.ipin VDD

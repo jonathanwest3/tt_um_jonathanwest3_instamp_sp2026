@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1795212379
+timestamp 1795215185
 << mvpsubdiff >>
 rect -3223 29385 -3163 29419
 rect -2171 29385 -2111 29419
@@ -445,23 +445,23 @@ rect -3466 1754 -3374 2844
 rect -1782 1754 -1638 2844
 rect -3466 1674 -1638 1754
 use bandgap  bandgap_0
-timestamp 1795211167
+timestamp 1795215019
 transform 0 1 27786 -1 0 37734
 box -5632 -3362 11226 3130
 use opamp  opamp_0
-timestamp 1795208113
+timestamp 1795214800
 transform 1 0 -21456 0 1 2758
 box 18130 -1182 45173 18348
 use opamp  opamp_1
-timestamp 1795208113
+timestamp 1795214800
 transform 1 0 -48934 0 1 2958
 box 18130 -1182 45173 18348
 use opamp  opamp_2
-timestamp 1795208113
+timestamp 1795214800
 transform 1 0 -48822 0 1 25324
 box 18130 -1182 45173 18348
 use opamp  opamp_3
-timestamp 1795208113
+timestamp 1795214800
 transform 1 0 -21494 0 1 25582
 box 18130 -1182 45173 18348
 use sky130_fd_pr__res_high_po_0p35_5E7VKC  R1

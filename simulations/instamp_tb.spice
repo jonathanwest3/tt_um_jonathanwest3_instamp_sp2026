@@ -1,4 +1,4 @@
-** sch_path: /home/jmwest/ece6120/instamp/xschem/instamp_tb.sch
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp_tb.sch
 **.subckt instamp_tb
 Vdd VDD 0 3.3
 Vdiff Vp Vn sin(0 5m 1k) AC=1
@@ -18,12 +18,12 @@ Cload Vout 0 10p
 
 .option wnflag=1
 .option savecurrents
-.option rshunt=1e12
+#.option rshunt=1e12
 
 # if one of these is uncommented, it will
 # override the subcircuit in the symbol
 # from the cace extracction
-#.include ../netlist/rcx/instamp.spice
+.include ../netlist/rcx/instamp.spice
 # from the mag extraction
 #.include ../netlist/layout/instamp.spice
 
@@ -185,8 +185,8 @@ endif
 **.ends
 
 * expanding   symbol:  instamp.sym # of pins=9
-** sym_path: /home/jmwest/ece6120/instamp/xschem/instamp.sym
-** sch_path: /home/jmwest/ece6120/instamp/xschem/instamp.sch
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/instamp.sch
 .subckt instamp Vn Rgn Vp Rgp Vmid Vout Vref VDD GND
 *.ipin Vp
 *.ipin Vn
@@ -203,18 +203,18 @@ XR3 Vout2 Vn4 GND sky130_fd_pr__res_high_po_0p35 L=51.36 mult=1
 XR4 Vout3 Vp4 GND sky130_fd_pr__res_high_po_0p35 L=51.36 mult=1
 XR5 Vp4 Vout5 GND sky130_fd_pr__res_high_po_0p35 L=51.36 mult=1
 XR6 Vn4 Vout GND sky130_fd_pr__res_high_po_0p35 L=51.36 mult=1
-x6 GND VDD Vp Rgp Vout3 Vref opamp
-x2 GND VDD Vn Rgn Vout2 Vref opamp
-x3 GND VDD Vp4 Vn4 Vout Vref opamp
-x4 GND VDD Vmid Vout5 Vout5 Vref opamp
-x1 Vref GND VDD bandgap
+x6 Vref Vout3 Vp Rgp VDD GND opamp
+x2 Vref Vout2 Vn Rgn VDD GND opamp
+x3 Vref Vout Vp4 Vn4 VDD GND opamp
+x4 Vref Vout5 Vmid Vout5 VDD GND opamp
+x1 Vref VDD GND bandgap
 .ends
 
 
 * expanding   symbol:  opamp.sym # of pins=6
-** sym_path: /home/jmwest/ece6120/instamp/xschem/opamp.sym
-** sch_path: /home/jmwest/ece6120/instamp/xschem/opamp.sch
-.subckt opamp GND VDD Vp Vn Vout Vref
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
+.subckt opamp Vref Vout Vp Vn VDD GND
 *.opin Vout
 *.ipin Vref
 *.ipin Vp
@@ -299,9 +299,9 @@ XC2 Vg28 Vout sky130_fd_pr__cap_mim_m3_1 W=30 L=20 MF=4 m=4
 
 
 * expanding   symbol:  bandgap.sym # of pins=3
-** sym_path: /home/jmwest/ece6120/instamp/xschem/bandgap.sym
-** sch_path: /home/jmwest/ece6120/instamp/xschem/bandgap.sch
-.subckt bandgap Vref GND VDD
+** sym_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sym
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/bandgap.sch
+.subckt bandgap Vref VDD GND
 *.opin Vref
 *.ipin GND
 *.ipin VDD

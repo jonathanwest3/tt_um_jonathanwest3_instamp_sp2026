@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1795212658
+timestamp 1795215185
 << locali >>
 rect 21200 44516 27260 44548
 rect 21200 44396 23054 44516
@@ -830,7 +830,7 @@ rect 27053 581 59316 659
 rect 27053 205 32133 581
 rect 27053 -103 27507 205
 use instamp  instamp_0
-timestamp 1795212379
+timestamp 1795215185
 transform 1 0 31800 0 1 0
 box -31800 0 32000 45000
 use sky130_fd_pr__res_high_po_0p35_G6ZNHL  sky130_fd_pr__res_high_po_0p35_G6ZNHL_0

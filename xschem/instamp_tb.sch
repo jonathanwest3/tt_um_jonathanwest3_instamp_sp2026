@@ -71,12 +71,12 @@ only_toplevel=true
 value="
 .option wnflag=1 
 .option savecurrents
-.option rshunt=1e12
+#.option rshunt=1e12
 
 # if one of these is uncommented, it will
 # override the subcircuit in the symbol
 # from the cace extracction
-#.include ../netlist/rcx/instamp.spice
+.include ../netlist/rcx/instamp.spice
 # from the mag extraction
 #.include ../netlist/layout/instamp.spice
 

@@ -48,6 +48,8 @@ N -160 -210 -160 -190 {lab=Vmid}
 N -160 -210 -60 -210 {lab=Vmid}
 N -60 -270 -60 -210 {lab=Vmid}
 N -60 -270 -0 -270 {lab=Vmid}
+N 330 -120 330 -100 {lab=GND}
+N 330 -270 330 -180 {lab=#net3}
 C {devices/code_shown.sym} -1000 -330 0 0 {name=CONTROL only_toplevel=false value=".control
 ac dec 10 1 10Meg
 let gain = db(V(Vout))
@@ -109,3 +111,6 @@ C {devices/vsource.sym} -160 -160 0 0 {name=vmid value="DC CACE\{vmid\}" savecur
 C {devices/gnd.sym} -160 -110 0 0 {name=vmid1 lab=GND
 value="DC CACE\{vmid\}"}
 C {devices/lab_wire.sym} -150 -210 0 1 {name=p1 sig_type=std_logic lab=Vmid}
+C {devices/vsource.sym} 330 -150 0 0 {name=vdd1 value="DC 1.2" savecurrent=false}
+C {devices/gnd.sym} 330 -100 0 0 {name=l4 lab=GND
+value="DC 1.2"}

@@ -48,10 +48,6 @@ spice_ignore=false
       }
 C {vdd.sym} 210 -390 0 0 {name=l3 lab=VDD}
 C {vsource.sym} 120 -640 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
-C {vsource.sym} 120 -370 0 0 {name=Vmid value=1.65 savecurrent=false}
-C {gnd.sym} 120 -340 0 0 {name=Vmid1 lab=0
-value=1.65}
-C {vdd.sym} 120 -400 0 0 {name=l6 lab=Vmid}
 C {lab_wire.sym} 120 -700 0 0 {name=p3 sig_type=std_logic lab=Vp}
 C {lab_wire.sym} 160 -590 0 0 {name=p4 sig_type=std_logic lab=Vn}
 C {vsource.sym} 120 -550 0 0 {name=Vcm value="0 ac=0" savecurrent=false}
@@ -65,7 +61,7 @@ value="
 # if one of these is uncommented, it will
 # override the subcircuit in the symbol
 # from the cace extracction
-#.include ../netlist/rcx/instamp.spice
+.include ../netlist/rcx/tt_um_jonathanwest3_instamp_sp2026.spice
 # from the mag extraction
 #.include ../netlist/layout/instamp.spice
 
@@ -257,9 +253,9 @@ C {gnd.sym} 1000 -610 0 0 {name=l7 lab=0}
 C {tt_um_jonathanwest3_instamp_sp2026.sym} 580 -270 0 0 {name=x1}
 C {lab_wire.sym} 270 -550 0 0 {name=p1 sig_type=std_logic lab=Rgp}
 C {lab_wire.sym} 270 -490 3 0 {name=p2 sig_type=std_logic lab=Rgn}
-C {lab_pin.sym} 440 -590 0 0 {name=p7 sig_type=std_logic lab=Vp}
-C {lab_pin.sym} 440 -550 0 0 {name=p8 sig_type=std_logic lab=Rgp}
+C {lab_pin.sym} 440 -550 0 0 {name=p7 sig_type=std_logic lab=Vp}
+C {lab_pin.sym} 440 -570 0 0 {name=p8 sig_type=std_logic lab=Rgp}
 C {lab_pin.sym} 440 -530 0 0 {name=p9 sig_type=std_logic lab=Rgn}
 C {lab_pin.sym} 440 -510 0 0 {name=p10 sig_type=std_logic lab=Vn}
 C {lab_pin.sym} 440 -610 0 0 {name=p11 sig_type=std_logic lab=Vout}
-C {lab_pin.sym} 440 -570 0 0 {name=p12 sig_type=std_logic lab=Vref}
+C {lab_pin.sym} 440 -590 0 0 {name=p12 sig_type=std_logic lab=Vref}

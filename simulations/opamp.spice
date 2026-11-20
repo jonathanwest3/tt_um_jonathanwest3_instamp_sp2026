@@ -1,5 +1,5 @@
-** sch_path: /home/jmwest/ece6120/instamp/xschem/opamp.sch
-**.subckt opamp GND VDD Vp Vn Vout Vref
+** sch_path: /home/jmwest/tt_um_jonathanwest3_instamp_sp2026/xschem/opamp.sch
+**.subckt opamp Vref Vout Vp Vn VDD GND
 *.opin Vout
 *.ipin Vref
 *.ipin Vp

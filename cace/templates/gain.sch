@@ -25,12 +25,6 @@ N -70 -240 -70 -220 {lab=VDD}
 N -310 -130 -310 -120 {lab=Vmid}
 N -310 -370 -30 -370 {lab=Vp}
 N -70 -290 -30 -290 {lab=VDD}
-N 620 -270 620 -260 {lab=GND}
-N 620 -280 620 -270 {lab=GND}
-N 670 -270 740 -270 {lab=GND}
-N 740 -280 740 -270 {lab=GND}
-N 740 -370 740 -340 {lab=Vout}
-N 620 -370 620 -340 {lab=Vout}
 N -310 -370 -310 -330 {lab=Vp}
 N -310 -270 -310 -230 {lab=Vn}
 N -310 -230 -310 -190 {lab=Vn}
@@ -40,7 +34,6 @@ N 420 -370 620 -370 {
 lab=Vout}
 N -70 -290 -70 -240 {lab=VDD}
 N 620 -370 670 -370 {lab=Vout}
-N 620 -270 670 -270 {lab=GND}
 N -310 -120 -310 -90 {lab=Vmid}
 N -110 -330 -110 -310 {lab=Rgn}
 N -110 -330 -30 -330 {lab=Rgn}
@@ -53,6 +46,15 @@ N 80 -390 80 -350 {lab=#net1}
 N 80 -170 80 -150 {lab=#net2}
 N 80 -100 80 40 {lab=#net3}
 N 380 -450 380 240 {lab=#net4}
+N -310 0 -310 10 {lab=GND}
+N -310 -90 -310 -60 {lab=Vmid}
+N 600 -270 600 -260 {lab=GND}
+N 600 -280 600 -270 {lab=GND}
+N 650 -270 720 -270 {lab=GND}
+N 720 -280 720 -270 {lab=GND}
+N 720 -370 720 -340 {lab=Vout}
+N 600 -370 600 -340 {lab=Vout}
+N 600 -270 650 -270 {lab=GND}
 C {devices/code_shown.sym} -1040 -340 0 0 {name=CONTROL only_toplevel=false value=".control
 ac dec 10 1 10Meg
 let gain = db(V(Vout))
@@ -90,7 +92,7 @@ value=CACE\{Rg\}
 device=resistor}
 C {capa.sym} 510 -320 0 0 {name=Cref
 m=1
-value=100n
+value=10n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 510 -280 0 0 {name=l2 lab=GND}
@@ -98,25 +100,27 @@ C {devices/gnd.sym} -70 -140 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} 20 -420 0 0 {name=l5 lab=GND}
 C {devices/lab_wire.sym} -70 -290 0 1 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} -200 -370 0 1 {name=p6 sig_type=std_logic lab=Vp}
-C {devices/res.sym} 620 -310 0 0 {name=Rload
-value=CACE\{Rload\}
-device=resistor}
-C {capa.sym} 740 -310 0 0 {name=Cload
-m=1
-value=CACE\{Cload\}
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 620 -260 0 0 {name=l3 lab=GND}
 C {vsource.sym} -310 -300 0 0 {name=Vdiff value="sin(0 5m 1k) AC=1"}
 C {devices/lab_wire.sym} -310 -90 0 1 {name=p2 sig_type=std_logic lab=Vmid}
 C {tt_um_jonathanwest3_instamp_sp2026.sym} 220 50 0 0 {name=x1}
 C {devices/lab_wire.sym} 450 -350 0 1 {name=p1 sig_type=std_logic lab=Vref}
-C {lab_pin.sym} 80 -290 0 0 {name=p7 sig_type=std_logic lab=Vp}
-C {lab_pin.sym} 80 -270 0 0 {name=p8 sig_type=std_logic lab=Rgp}
-C {lab_pin.sym} 80 -250 0 0 {name=p9 sig_type=std_logic lab=Rgn}
-C {lab_pin.sym} 80 -230 0 0 {name=p10 sig_type=std_logic lab=Vn}
-C {lab_pin.sym} 80 -210 0 0 {name=p11 sig_type=std_logic lab=Vout}
-C {lab_pin.sym} 80 -190 0 0 {name=p12 sig_type=std_logic lab=Vref}
+C {lab_pin.sym} 80 -230 0 0 {name=p7 sig_type=std_logic lab=Vp}
+C {lab_pin.sym} 80 -250 0 0 {name=p8 sig_type=std_logic lab=Rgp}
+C {lab_pin.sym} 80 -210 0 0 {name=p9 sig_type=std_logic lab=Rgn}
+C {lab_pin.sym} 80 -190 0 0 {name=p10 sig_type=std_logic lab=Vn}
+C {lab_pin.sym} 80 -290 0 0 {name=p11 sig_type=std_logic lab=Vout}
+C {lab_pin.sym} 80 -270 0 0 {name=p12 sig_type=std_logic lab=Vref}
 C {devices/lab_wire.sym} -70 -350 0 1 {name=p3 sig_type=std_logic lab=Rgp}
 C {devices/lab_wire.sym} -70 -330 0 1 {name=p13 sig_type=std_logic lab=Rgn}
 C {lab_pin.sym} 80 -450 0 0 {name=p14 sig_type=std_logic lab=VDD}
+C {devices/vsource.sym} -310 -30 0 0 {name=Vmid value="DC CACE\{Vmid\}" savecurrent=false}
+C {devices/gnd.sym} -310 10 0 0 {name=l3 lab=GND}
+C {devices/res.sym} 600 -310 0 0 {name=Rload
+value=CACE\{Rload\}
+device=resistor}
+C {capa.sym} 720 -310 0 0 {name=Cload
+m=1
+value=CACE\{Cload\}
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 600 -260 0 0 {name=l4 lab=GND}
