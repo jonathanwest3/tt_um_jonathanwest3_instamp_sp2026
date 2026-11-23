@@ -102,9 +102,12 @@
   + Unit: °C
   + Typical: 27
   + Maximum: 80
+  + Minimum: 0
 - corner
   + Description: Process corner
   + Display: Corner
+  + Minimum: ss
+  + Maximum: ff
   + Typical: tt
 - iterations
   + Description: Iterations to run

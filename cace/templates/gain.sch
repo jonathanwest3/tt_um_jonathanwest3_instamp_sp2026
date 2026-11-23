@@ -55,6 +55,10 @@ N 720 -280 720 -270 {lab=GND}
 N 720 -370 720 -340 {lab=Vout}
 N 600 -370 600 -340 {lab=Vout}
 N 600 -270 650 -270 {lab=GND}
+N 460 -190 460 -170 {lab=GND}
+N 460 -270 460 -250 {lab=Vref}
+N 460 -280 460 -270 {lab=Vref}
+N 460 -350 460 -280 {lab=Vref}
 C {devices/code_shown.sym} -1040 -340 0 0 {name=CONTROL only_toplevel=false value=".control
 ac dec 10 1 10Meg
 let gain = db(V(Vout))
@@ -124,3 +128,6 @@ value=CACE\{Cload\}
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 600 -260 0 0 {name=l4 lab=GND}
+C {devices/vsource.sym} 460 -220 0 0 {name=vdd1 value="DC 1.2" savecurrent=false}
+C {devices/gnd.sym} 460 -170 0 0 {name=l6 lab=GND
+value="DC 1.2"}

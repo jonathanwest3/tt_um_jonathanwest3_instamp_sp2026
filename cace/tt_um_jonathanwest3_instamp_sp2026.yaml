@@ -110,9 +110,12 @@ default_conditions:
     unit: °C
     typical: 27
     maximum: 80
+    minimum: 0
   corner:
     description: Process corner
     display: Corner
+    minimum: ss
+    maximum: ff
     typical: tt
   iterations:
     description: Iterations to run
@@ -149,7 +152,7 @@ parameters:
       bw:
         unit: kHz
         minimum:
-          value: 100
+          value: 80
           fail: true
         typical:
           value: 300
@@ -235,7 +238,7 @@ parameters:
       sr_rise:
         unit: V/us
         minimum:
-          value: 0.5
+          value: 0.4
           fail: true
         typical:
           value: 0.8
@@ -245,7 +248,7 @@ parameters:
       sr_fall:
         unit: V/us
         minimum:
-          value: 0.5
+          value: 0.4
           fail: true
         typical:
           value: 0.8

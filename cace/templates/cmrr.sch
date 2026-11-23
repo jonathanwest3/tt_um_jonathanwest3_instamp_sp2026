@@ -55,6 +55,10 @@ N 730 -300 730 -290 {lab=GND}
 N 730 -390 730 -360 {lab=Vout}
 N 610 -390 610 -360 {lab=Vout}
 N 610 -290 660 -290 {lab=GND}
+N 470 -210 470 -190 {lab=GND}
+N 470 -290 470 -270 {lab=Vref}
+N 470 -300 470 -290 {lab=Vref}
+N 470 -370 470 -300 {lab=Vref}
 C {devices/code_shown.sym} -1000 -330 0 0 {name=CONTROL only_toplevel=false value=".control
 set gnuplot_terminal=png/quit
 alter Vdiff ac=1
@@ -151,3 +155,6 @@ value=CACE\{Cload\}
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 610 -280 0 0 {name=l4 lab=GND}
+C {devices/vsource.sym} 470 -240 0 0 {name=vdd1 value="DC 1.2" savecurrent=false}
+C {devices/gnd.sym} 470 -190 0 0 {name=l6 lab=GND
+value="DC 1.2"}

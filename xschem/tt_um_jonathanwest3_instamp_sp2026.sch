@@ -284,16 +284,6 @@ L=1
 model=res_generic_m3
 mult=1}
 C {lab_pin.sym} -360 -80 0 0 {name=p69 sig_type=std_logic lab=VGND}
-C {sky130_fd_pr/res_generic_m3.sym} -330 -140 1 0 {name=R41
-W=1
-L=1
-model=res_generic_m3
-mult=1}
-C {sky130_fd_pr/res_generic_m3.sym} -330 -120 1 0 {name=R42
-W=1
-L=1
-model=res_generic_m3
-mult=1}
 C {lab_pin.sym} 1040 200 0 0 {name=p70 sig_type=std_logic lab=VGND}
 C {sky130_fd_pr/res_generic_m3.sym} 1070 20 1 0 {name=R35
 W=1

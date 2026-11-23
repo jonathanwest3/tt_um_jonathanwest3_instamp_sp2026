@@ -55,6 +55,10 @@ N 770 -430 770 -420 {lab=GND}
 N 770 -520 770 -490 {lab=Vout}
 N 650 -520 650 -490 {lab=Vout}
 N 650 -420 700 -420 {lab=GND}
+N 520 -390 520 -370 {lab=GND}
+N 520 -470 520 -450 {lab=Vref}
+N 520 -480 520 -470 {lab=Vref}
+N 520 -500 520 -480 {lab=Vref}
 C {devices/code_shown.sym} -1120 -200 0 0 {name=CONTROL only_toplevel=false value=".control
 let per=5u
 let t_vl=per/2
@@ -145,3 +149,6 @@ value=CACE\{Cload\}
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 650 -410 0 0 {name=l4 lab=GND}
+C {devices/vsource.sym} 520 -420 0 0 {name=vdd1 value="DC 1.2" savecurrent=false}
+C {devices/gnd.sym} 520 -370 0 0 {name=l6 lab=GND
+value="DC 1.2"}
