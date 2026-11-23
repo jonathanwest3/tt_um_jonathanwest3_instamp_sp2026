@@ -519,9 +519,6 @@ MACRO tt_um_jonathanwest3_instamp_sp2026
         RECT 38.470 -0.165 40.000 -0.095 ;
         RECT 58.235 -0.165 59.765 0.000 ;
         RECT 78.095 -0.005 79.305 0.000 ;
-        RECT 96.355 -0.505 98.805 0.000 ;
-        RECT 115.950 -0.720 117.750 0.000 ;
-        RECT 135.265 -0.515 137.535 0.000 ;
   END
 END tt_um_jonathanwest3_instamp_sp2026
 END LIBRARY
